@@ -46,14 +46,14 @@ $(document).ready(function(){
 					if (finalamt >= 0) {
 					
 						//add list items			
-						$('#items').append('<li>You can buy ' + '<em>' + finalamt + ' ' +  itemvar.name + 's</em>' + posmessage + '</li>');
+						$('#items').append('<li>You can buy ' + '<em>' + finalamt + ' ' +  itemvar.name + 's</em> ' + posmessage + '</li>');
 					
 					} else {
 						
 						var finalstrpamt = finalamt.toString();
 						
 						//add list items			
-						$('#items').append('<li>You owe ' + '<em>' + finalstrpamt.substr(1) + ' ' +  itemvar.name + 's</em>' + negmessage + '</li>');
+						$('#items').append('<li>You owe ' + '<em>' + finalstrpamt.substr(1) + ' ' +  itemvar.name + 's</em> ' + negmessage + '</li>');
 						
 					}
 				
@@ -113,14 +113,14 @@ $(document).ready(function(){
 					if (finalamt >= 0) {
 					
 						//add list items			
-						$('#items').append('<li>You can buy ' + '<em>' + finalamt + ' ' +  itemvar.name + 's</em>' + posmessage + '</li>');
+						$('#items').append('<li>You can buy ' + '<em>' + finalamt + ' ' +  itemvar.name + 's</em> ' + posmessage + '</li>');
 					
 					} else {
 						
 						var finalstrpamt = finalamt.toString();
 						
 						//add list items			
-						$('#items').append('<li>You owe ' + '<em>' + finalstrpamt.substr(1) + ' ' +  itemvar.name + 's</em>' + negmessage + '</li>');
+						$('#items').append('<li>You owe ' + '<em>' + finalstrpamt.substr(1) + ' ' +  itemvar.name + 's</em> ' + negmessage + '</li>');
 						
 					}
 					
