@@ -31,7 +31,14 @@
         <ul id="items">
         
         </ul>
-    
+        
+         <form method="post">
+        
+            <input type="submit" name="more-button" id="more-button" value="load more" />
+        
+        
+        </form>       
+        
     </section>
 
 </main>
