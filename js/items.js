@@ -3,6 +3,8 @@ $(document).ready(function(){
 	//on click function
 	$("#submit-button").click(function(e) {
 		
+		$('#items li').remove();
+		
 		//stop from submitting and refreshing
 		e.preventDefault();
 		
@@ -15,7 +17,7 @@ $(document).ready(function(){
 			dataType: "json",
 			success: function(data) {
             
-			//put json data intwo variable           
+			//put json data into variable           
 			var itemsArray = data;
 			
 			//loop through array and get six random entries			
