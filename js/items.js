@@ -35,8 +35,19 @@ $(document).ready(function(){
 					
 					var finalamt = Math.floor(dollarAmount/itemvar.price);
 					
-					//add list items			
-					$('#items').append('<li>You can buy ' + '<em>' + finalamt + ' ' +  itemvar.name + 's</em> with your money!</li>');
+					if (finalamt >= 0) {
+					
+						//add list items			
+						$('#items').append('<li>You can buy ' + '<em>' + finalamt + ' ' +  itemvar.name + 's</em> with your money!</li>');
+					
+					} else {
+						
+						var finalstrpamt = finalamt.toString();
+						
+						//add list items			
+						$('#items').append('<li>You owe ' + '<em>' + finalstrpamt.substr(1) + ' ' +  itemvar.name + 's</em> worth of money!</li>');
+						
+					}
 				
 				}
 						
@@ -91,9 +102,20 @@ $(document).ready(function(){
 					
 					var finalamt = Math.floor(dollarAmount/itemvar.price);
 					
-					//add list items			
-					$('#items').append('<li>You can buy ' + '<em>' + finalamt + ' ' +  itemvar.name + 's</em> with your money!</li>');
-				
+					if (finalamt >= 0) {
+					
+						//add list items			
+						$('#items').append('<li>You can buy ' + '<em>' + finalamt + ' ' +  itemvar.name + 's</em> with your money!</li>');
+					
+					} else {
+						
+						var finalstrpamt = finalamt.toString();
+						
+						//add list items			
+						$('#items').append('<li>You owe ' + '<em>' + finalstrpamt.substr(1) + ' ' +  itemvar.name + 's</em> worth of money!</li>');
+						
+					}
+					
 				}
 						
 				}
