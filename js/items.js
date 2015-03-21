@@ -14,7 +14,7 @@ $(document).ready(function(){
 		
 		
 		//validation
-		if (dollarAmount) {
+		if (dollarAmount && jQuery.isNumeric(dollarAmount)) {
 		
 			//housekeeping
 			$('#items li').remove();

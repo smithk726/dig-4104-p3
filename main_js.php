@@ -17,7 +17,7 @@
 
     <form method="post">
     
-        <label for="dollar-amount">Enter how much money is in your bank account:</label>
+        <label for="dollar-amount">Enter how much money is in your bank account: $</label>
         
         <input type="text" id="dollar-amount" name="dollar-amount" />
         
