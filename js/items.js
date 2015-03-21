@@ -5,6 +5,7 @@ $(document).ready(function(){
 	//define messages 
 	var posmessage = "with your money!";
 	var negmessage = "worth of money!";	
+	var valerror = "PLEASE ENTER A NUMBER!";
 	
 //main js 
 
@@ -67,7 +68,7 @@ $(document).ready(function(){
 		
 		}  else {
 			
-			alert("PLEASE ENTER A NUMBER!");
+			alert(valerror);
 			
 			$('#more-button').hide();	
 			
@@ -134,7 +135,7 @@ $(document).ready(function(){
 		
 		}  else {
 			
-			alert("PLEASE ENTER A NUMBER!");
+			alert(valerror);
 			
 			$('#more-button').hide();	
 			
