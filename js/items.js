@@ -17,7 +17,7 @@ $(document).ready(function(){
 						
 				var itemvar = itemsArray.items[Math.floor(Math.random() * itemsArray.items.length)];
 							
-				$('main').append('<div>You can buy ' + '<em>' + Math.floor(dollarAmount / itemvar.price) + ' ' +  itemvar.name + 's</em> with your money!</div>');
+				$('#items').append('<li>You can buy ' + '<em>' + Math.floor(dollarAmount / itemvar.price) + ' ' +  itemvar.name + 's</em> with your money!</li>');
 			
 			}
 					
