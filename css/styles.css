@@ -154,3 +154,7 @@ main div {
 main form {
 	margin-bottom: 18px;
 }
+
+main em {
+	font-weight: bold; font-style: normal;
+}
