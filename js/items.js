@@ -48,7 +48,7 @@ $(document).ready(function(){
 		
 		}  else {
 			
-			alert("YOU DIDN'T ENTER ANYTHING!");
+			alert("PLEASE ENTER A NUMBER!");
 			
 			$('#more-button').hide();	
 			
@@ -70,7 +70,7 @@ $(document).ready(function(){
 		
 		
 		//validation
-		if (dollarAmount) {
+		if (dollarAmount && jQuery.isNumeric(dollarAmount)) {
 		
 			//housekeeping
 			$('#items li').remove();
@@ -104,7 +104,7 @@ $(document).ready(function(){
 		
 		}  else {
 			
-			alert("YOU DIDN'T ENTER ANYTHING!");
+			alert("PLEASE ENTER A NUMBER!");
 			
 			$('#more-button').hide();	
 			
