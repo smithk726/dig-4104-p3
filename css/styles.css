@@ -1,0 +1,135 @@
+/**********/
+/* GLOBAL */
+/**********/
+html, body {
+	margin: 0;
+}
+
+.global-width {
+	max-width: 1024px;
+	min-width: 100px;
+	margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+	font-size: 54px;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+}
+
+
+/*********/
+/* INPUT */
+/*********/
+.input-page {
+	height:100vh;
+	background: url(../img/moneybg2.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+#submitInput {
+	padding: 10px 0;
+	width:200px;
+	display: inline-block;
+	background: #ddd;
+	text-align: center;
+	position: relative;
+}
+
+#submitInput:hover {
+	cursor: pointer;
+	background: #ccc;
+}
+
+#inputinfo .valign {
+	text-align: center;
+	height:100vh;
+}
+.valign {
+	display:table;
+	width: 100%;
+	table-layout: fixed;
+}
+.valign > div {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+}
+
+input {
+	text-align: center;
+}
+
+.myfield {
+	position:relative;
+	width:100%;
+	margin-bottom: 10px;
+	vertical-align:middle;
+	font-size: 16px;
+	overflow: hidden;
+}
+.box {
+	position:relative;
+	border:none;
+	border-bottom: 2px solid #000;
+	padding: 40px 20px;
+	padding-left: 0;
+	height:36px;
+	line-height:34px;
+	font-size:2rem;
+
+	width:50%;
+	outline:none;
+	resize:none;
+
+	font-family: 'Open Sans', sans-serif;
+	box-shadow:none;
+
+	color:#000;
+	background: none;
+}
+::-webkit-input-placeholder {
+	color:$dyellow;
+}
+:-moz-placeholder {
+	color:$dyellow;
+}
+::-moz-placeholder {
+	color:$dyellow;
+}
+:-ms-input-placeholder {
+	color:$dyellow;
+}
+
+
+/**********/
+/* BLOCKS */
+/**********/
+.commodities {
+	display: block;
+	margin: 0 auto;
+	padding: 120px 0;
+	text-align: center;
+	display: none;
+	position: relative;
+}
+
+.commodity {
+	background: #ddd;
+	border: 1px solid #ccc;
+	display: inline-block;
+	margin: 0 1em 1em 0;
+	vertical-align: top;
+	width: 320px;
+	height: 320px;
+	opacity: 0;
+}
