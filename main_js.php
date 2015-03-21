@@ -25,6 +25,10 @@
     
     
     </form>
+    
+    <section id="inflation">
+
+    </section>
 
     <section>
     

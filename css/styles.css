@@ -143,12 +143,16 @@ input {
 	margin-top: 200px;
 }
 
-main li, main label {
+main li, main label, #inflation div  {
 	font-size: 1.6em; line-height: 18px;
 }
 
-main li {
+main li, #inflation div  {
 	margin-bottom: 18px;
+}
+
+#inflation div:last-child {
+	border-bottom: 1px solid black; padding-bottom: 18px;
 }
 
 main form {
@@ -158,3 +162,6 @@ main form {
 main em {
 	font-weight: bold; font-style: normal;
 }
+
+#inflation div {
+	

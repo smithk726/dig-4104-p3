@@ -6,6 +6,8 @@ $(document).ready(function(){
 	var posmessage = "with your money!";
 	var negmessage = "worth of money!";	
 	var valerror = "PLEASE ENTER A NUMBER!";
+	var sixtymessage = "In 1955, your money would be worth ";
+	var hundredmessage = "In 1915, your money would be worth ";
 	
 //main js 
 
@@ -20,13 +22,20 @@ $(document).ready(function(){
 		
 		//get input value and save to variable
 		var dollarAmount = $('#dollar-amount').val();
-		
-		
+	
+		//inflation equation
+		var sixty = dollarAmount * 9.0909090909090909;
+		var hundred = dollarAmount * 25;
+	
+
 		//validation
 		if (dollarAmount && jQuery.isNumeric(dollarAmount)) {
 		
 			//housekeeping
 			$('#items li').remove();
+			
+			//inflation
+			$('#inflation').append('<div>' + sixtymessage + sixty.toFixed(2) + '</div><div>' + hundredmessage + hundred.toFixed(2) + '</div>');
 			
 			//get json data from file
 			$.ajax({
