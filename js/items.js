@@ -1,4 +1,12 @@
 $(document).ready(function(){
+	
+//global variables	
+	
+	//define messages 
+	var posmessage = "with your money!";
+	var negmessage = "worth of money!";	
+	
+//main js 
 
 	//hide more button
 	$('#more-button').hide();
@@ -38,14 +46,14 @@ $(document).ready(function(){
 					if (finalamt >= 0) {
 					
 						//add list items			
-						$('#items').append('<li>You can buy ' + '<em>' + finalamt + ' ' +  itemvar.name + 's</em> with your money!</li>');
+						$('#items').append('<li>You can buy ' + '<em>' + finalamt + ' ' +  itemvar.name + 's</em>' + posmessage + '</li>');
 					
 					} else {
 						
 						var finalstrpamt = finalamt.toString();
 						
 						//add list items			
-						$('#items').append('<li>You owe ' + '<em>' + finalstrpamt.substr(1) + ' ' +  itemvar.name + 's</em> worth of money!</li>');
+						$('#items').append('<li>You owe ' + '<em>' + finalstrpamt.substr(1) + ' ' +  itemvar.name + 's</em>' + negmessage + '</li>');
 						
 					}
 				
@@ -105,14 +113,14 @@ $(document).ready(function(){
 					if (finalamt >= 0) {
 					
 						//add list items			
-						$('#items').append('<li>You can buy ' + '<em>' + finalamt + ' ' +  itemvar.name + 's</em> with your money!</li>');
+						$('#items').append('<li>You can buy ' + '<em>' + finalamt + ' ' +  itemvar.name + 's</em>' + posmessage + '</li>');
 					
 					} else {
 						
 						var finalstrpamt = finalamt.toString();
 						
 						//add list items			
-						$('#items').append('<li>You owe ' + '<em>' + finalstrpamt.substr(1) + ' ' +  itemvar.name + 's</em> worth of money!</li>');
+						$('#items').append('<li>You owe ' + '<em>' + finalstrpamt.substr(1) + ' ' +  itemvar.name + 's</em>' + negmessage + '</li>');
 						
 					}
 					
