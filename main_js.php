@@ -15,24 +15,24 @@
 
 <main id="main" role="main" class="global-width">
 
-<form method="post">
-
-	<label for="dollar-amount">Enter how much money is in your bank account:</label>
+    <form method="post">
     
-    <input type="text" id="dollar-amount" name="dollar-amount" />
+        <label for="dollar-amount">Enter how much money is in your bank account:</label>
+        
+        <input type="text" id="dollar-amount" name="dollar-amount" />
+        
+        <input type="submit" name="submit-button" id="submit-button" />
     
-    <input type="submit" name="submit-button" id="submit-button" />
+    
+    </form>
 
-
-</form>
-
-<section>
-
-<ul id="items">
-
-</ul>
-
-</section>
+    <section>
+    
+        <ul id="items">
+        
+        </ul>
+    
+    </section>
 
 </main>
 
