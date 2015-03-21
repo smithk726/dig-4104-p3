@@ -9,29 +9,8 @@
 	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
-	<script type="text/javascript">
-		function displayResults() {
-			$(function() {
-				$('.commodities')
-					.css('display', 'block');
-			});
-
-			$(function() {
-				$('#commboss .commodity').each(function(i) {
-					$(this).delay((i++)*500).fadeTo(1000,1);
-				})
-			});
-
-			$("#submitInput").click(function() {
-				$('html, body').animate({
-					scrollTop: $("#commboss").offset().top
-				}, 1000);
-				return false;
-			});
-		}
-	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/items.js"></script>
 </head>
 
 <body>
@@ -45,10 +24,10 @@
 						<h1>What's the value of your money?</h1>
 						<form action="" method="post">
 							<ul>
-								<li class="myfield"><input class="box" type="text" placeholder="$" /></li>
+								<li class="myfield"><input id="dollar-amount" class="box" type="text" placeholder="$" /></li>
 							</ul>
 						</form>
-						<h3 id="submitInput"><a onclick="displayResults()">Show me the money</a></h3>
+						<h3 id="submit-button"><a>Show me the money</a></h3>
 					</div>
 				</div>
 			</div>
@@ -57,32 +36,24 @@
 	<!-- /input -->
 
 	<!-- commodity comparison -->
-	<div class="commodities" id="commboss">
-		<div class="commodity">
-			<p>one</p>
+	<div class="commodities global-width" id="commboss">
+		<div id="items">
 		</div>
 
-		<div class="commodity">
-			<p>for the</p>
-		</div>
+		<hr/>
 
-		<div class="commodity">
-			<p>money</p>
-		</div>
-
-		<div class="commodity">
-			<p>two</p>
-		</div>
-
-		<div class="commodity">
-			<p>for the</p>
-		</div>
-
-		<div class="commodity">
-			<p>show</p>
+		<div>
+			<form method="post">
+				<input type="submit" name="more-button" id="more-button" value="load more" />
+			</form> 
 		</div>
 	</div>
 	<!-- /commodity comparison -->
+
+	<!-- inflation -->
+	<div class="global-width" id="inflation">
+	</div>
+	<!-- /inflation -->
 
 </div>
 </body>

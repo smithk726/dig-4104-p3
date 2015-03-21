@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	
+
 //global variables	
 	
 	//define messages 
@@ -8,7 +8,7 @@ $(document).ready(function(){
 	var valerror = "PLEASE ENTER A NUMBER!";
 	var sixtymessage = "In 1955, your money would be worth ";
 	var hundredmessage = "In 1915, your money would be worth ";
-	
+
 //main js 
 
 	//hide more button
@@ -16,26 +16,31 @@ $(document).ready(function(){
 
 	//on click function
 	$("#submit-button").click(function(e) {
+
+		$('.commodities').css('display', 'block');
+
+		$('html, body').animate({
+			scrollTop: $("#commboss").offset().top
+		}, 1000);
 		
 		//stop from submitting and refreshing
 		e.preventDefault();
 		
 		//get input value and save to variable
 		var dollarAmount = $('#dollar-amount').val();
-	
+
 		//inflation equation
 		var sixty = dollarAmount * 9.0909090909090909;
 		var hundred = dollarAmount * 25;
-	
-
+		
+		
 		//validation
 		if (dollarAmount && jQuery.isNumeric(dollarAmount)) {
 		
 			//housekeeping
-			$('#items li').remove();
-			
-			//inflation
-			$('#inflation').append('<div>' + sixtymessage + sixty.toFixed(2) + '</div><div>' + hundredmessage + hundred.toFixed(2) + '</div>');
+			$('#items .commodity').remove();
+
+			$('#inflation').append('<div><h2>' + sixtymessage + sixty.toFixed(2) + '</h2></div><div><h2>' + hundredmessage + hundred.toFixed(2) + '</h2></div>');
 			
 			//get json data from file
 			$.ajax({
@@ -53,19 +58,18 @@ $(document).ready(function(){
 					
 					var finalamt = Math.floor(dollarAmount/itemvar.price);
 					
+					//add list items
 					if (finalamt >= 0) {
-					
-						//add list items			
-						$('#items').append('<li>You can buy ' + '<em>' + finalamt + ' ' +  itemvar.name + 's</em> ' + posmessage + '</li>');
-					
-					} else {
-						
-						var finalstrpamt = finalamt.toString();
-						
-						//add list items			
-						$('#items').append('<li>You owe ' + '<em>' + finalstrpamt.substr(1) + ' ' +  itemvar.name + 's</em> ' + negmessage + '</li>');
-						
+						$('#items').append('<div class="commodity"><p>You can buy ' + '<em>' + finalamt + ' ' + itemvar.name + 's</em> ' + posmessage + '</p></div>');
 					}
+					else {
+						var finalstrpamt = finalamt.toString();
+						$('#items').append('<div class="commodity"><p>You owe ' + '<em>' + finalstrpamt.substr(1) + ' ' + itemvar.name + 's</em> ' + negmessage + '</p></div>');
+					}
+
+					$('#items .commodity').each(function(i) {
+						$(this).delay((i++)*500).fadeTo(1000,1);
+					});
 				
 				}
 						
@@ -77,12 +81,12 @@ $(document).ready(function(){
 		
 		}  else {
 			
-			alert(valerror);
+			alert("PLEASE ENTER A NUMBER!");
 			
 			$('#more-button').hide();	
 			
 			//housekeeping
-			$('#items li').remove();
+			$('#items .commodity').remove();
 		
 		}
 		
@@ -90,6 +94,10 @@ $(document).ready(function(){
 
 	//MORE function
 	$("#more-button").click(function(e) {
+
+		$('html, body').animate({
+			scrollTop: $("#commboss").offset().top
+		}, 100);
 		
 		//stop from submitting and refreshing
 		e.preventDefault();
@@ -102,7 +110,7 @@ $(document).ready(function(){
 		if (dollarAmount && jQuery.isNumeric(dollarAmount)) {
 		
 			//housekeeping
-			$('#items li').remove();
+			$('#items .commodity').remove();
 			
 			//get json data from file
 			$.ajax({
@@ -120,20 +128,19 @@ $(document).ready(function(){
 					
 					var finalamt = Math.floor(dollarAmount/itemvar.price);
 					
+					//add list items
 					if (finalamt >= 0) {
-					
-						//add list items			
-						$('#items').append('<li>You can buy ' + '<em>' + finalamt + ' ' +  itemvar.name + 's</em> ' + posmessage + '</li>');
-					
-					} else {
-						
-						var finalstrpamt = finalamt.toString();
-						
-						//add list items			
-						$('#items').append('<li>You owe ' + '<em>' + finalstrpamt.substr(1) + ' ' +  itemvar.name + 's</em> ' + negmessage + '</li>');
-						
+						$('#items').append('<div class="commodity"><p>You can buy ' + '<em>' + finalamt + ' ' + itemvar.name + 's</em> ' + posmessage + '</p></div>');
 					}
-					
+					else {
+						var finalstrpamt = finalamt.toString();
+						$('#items').append('<div class="commodity"><p>You owe ' + '<em>' + finalstrpamt.substr(1) + ' ' + itemvar.name + 's</em> ' + negmessage + '</p></div>');
+					}
+
+					$('#items .commodity').each(function(i) {
+						$(this).delay((i++)*500).fadeTo(1000,1);
+					});
+				
 				}
 						
 				}
@@ -144,12 +151,12 @@ $(document).ready(function(){
 		
 		}  else {
 			
-			alert(valerror);
+			alert("PLEASE ENTER A NUMBER!");
 			
 			$('#more-button').hide();	
 			
 			//housekeeping
-			$('#items li').remove();
+			$('#items .commodity').remove();
 		
 		}
 		
