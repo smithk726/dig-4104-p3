@@ -40,19 +40,20 @@ p {
 	padding: 10px 0;
 	width:200px;
 	display: inline-block;
-	background: #ddd;
+	background: #86d286;
 	text-align: center;
 	position: relative;
 }
 
 #submit-button:hover {
 	cursor: pointer;
-	background: #ccc;
+	background: #6bad6b;
 }
 
 #inputinfo .valign {
 	text-align: center;
 	height:100vh;
+	min-height:700px;
 }
 .valign {
 	display:table;
@@ -117,15 +118,12 @@ input {
 .commodities {
 	display: block;
 	margin: 0 auto;
-	padding: 120px 0;
 	text-align: center;
 	display: none;
 	position: relative;
 }
 
 .commodity {
-	background: #ddd;
-	border: 1px solid #ccc;
 	display: inline-block;
 	margin: 0 1em 1em 0;
 	vertical-align: top;
@@ -133,13 +131,77 @@ input {
 	height: 320px;
 	opacity: 0;
 }
+#commboss {
+	border-bottom: 1px solid #6bad6b;
+}
+
+.commodity:nth-of-type(1) {
+	background: #df969b;
+	border: 1px solid #c28185;
+}
+.commodity:nth-of-type(2) {
+	background: #b1d29d;
+	border: 1px solid #95b483;
+}
+.commodity:nth-of-type(3) {
+	background: #eec48b;
+	border: 1px solid #d6b17e;
+}
+.commodity:nth-of-type(4) {
+	background: #8aa6d6;
+	border: 1px solid #768db6;
+}
+.commodity:nth-of-type(5) {
+	background: #fff79d;
+	border: 1px solid #e8e18f;
+}
+.commodity:nth-of-type(6) {
+	background: #9985bb;
+	border: 1px solid #82719e;
+}
+
+#comminfo .valign {
+	text-align: center;
+	height:100vh;
+	min-height:700px;
+}
+#more-button {
+	padding: 10px 0;
+	width:200px;
+	display: inline-block;
+	background: #86d286;
+	text-align: center;
+	position: relative;
+}
+
+#more-button:hover {
+	cursor: pointer;
+	background: #6bad6b;
+}
 
 
 /**********/
 /* INFLAT */
 /**********/
 #inflation {
+	display: none;
 	text-align: center;
+	padding: 40px 0;
+}
+.num {
+	font-size: 60px;
+	line-height: 1.1;
+	color: #6bad6b;
+}
+
+
+/**********/
+/* FOOTER */
+/**********/
+#footer {
+	display: none;
+	background: #ccc;
+	padding: 10px 0;
 }
 
 

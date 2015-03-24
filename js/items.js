@@ -17,11 +17,7 @@ $(document).ready(function(){
 	//on click function
 	$("#submit-button").click(function(e) {
 
-		$('.commodities').css('display', 'block');
 
-		$('html, body').animate({
-			scrollTop: $("#commboss").offset().top
-		}, 1000);
 		
 		//stop from submitting and refreshing
 		e.preventDefault();
@@ -36,11 +32,18 @@ $(document).ready(function(){
 		
 		//validation
 		if (dollarAmount && jQuery.isNumeric(dollarAmount)) {
+			$('.commodities').css('display', 'block');
+			$('#inflation').css('display','block');
+			$('#footer').css('display','block');
+
+			$('html, body').animate({
+				scrollTop: $("#commboss").offset().top
+			}, 1000);
 		
 			//housekeeping
 			$('#items .commodity').remove();
 
-			$('#inflation').append('<div><h2>' + sixtymessage + sixty.toFixed(2) + '</h2></div><div><h2>' + hundredmessage + hundred.toFixed(2) + '</h2></div>');
+			$('#inflation').append('<div><p>' + sixtymessage + '</p><p><strong class="num"><span class="inum">$' + sixty.toFixed(2) + '</span></strong></p></div><br/><div><p>' + hundredmessage + '</p><p><strong class="num"><span class="inum">$' + hundred.toFixed(2) + '</span></strong></p></div>');
 			
 			//get json data from file
 			$.ajax({
