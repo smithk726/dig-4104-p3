@@ -18,27 +18,6 @@ $(document).ready(function() {
 	var muchClick = 1;
 	var altClick = 0;
 	var solClick = 0;
-
-	$('.arrows-down').hover(function(){
-		$('.arrows-down').attr('src', 'img/arrowhover.png');
-		}, function(){
-			$('.arrows-down').attr('src', 'img/arrow.png');
-		});
-	$('.arrows-up').hover(function(){
-		$('.arrows-up').attr('src', 'img/arrowuphover.png');
-		}, function(){
-			$('.arrows-up').attr('src', 'img/arrowup.png');
-		});
-	$('.arrows-left').hover(function(){
-		$('.arrows-left').attr('src', 'img/arrowlefthover.png');
-		}, function(){
-			$('.arrows-left').attr('src', 'img/arrowleft.png');
-		});
-	$('.arrows-right').hover(function(){
-		$('.arrows-right').attr('src', 'img/arrowrighthover.png');
-		}, function(){
-			$('.arrows-right').attr('src', 'img/arrowright.png');
-		});
 	
 
 	//intro arrow

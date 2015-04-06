@@ -37,6 +37,7 @@ html, body {
 }
 .arrows:hover {
 	cursor: pointer;
+	opacity: .5;
 }
 .text-center {
 	text-align: center;
