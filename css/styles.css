@@ -15,6 +15,13 @@ html, body {
 	min-height: 700px;
 	position: relative;
 }
+
+.arrows {
+	opacity: .5; 
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
 .arrows-down {
 	position: absolute;
 	left: 47.5%;
@@ -37,7 +44,7 @@ html, body {
 }
 .arrows:hover {
 	cursor: pointer;
-	opacity: .5;
+	opacity: 1;
 }
 .text-center {
 	text-align: center;
