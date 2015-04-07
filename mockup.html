@@ -1,0 +1,354 @@
+<html>
+<head>
+	<title>The Tuition Is Too Damn High</title>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="js/pageswitch.js" type="text/javascript"></script>
+	<script src="js/calculator.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/d3/d3.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+	<!-- SLIDE 01 -->
+	<div class="container global-width" id="isOne">
+		<div id="slide01">
+			<div class="valign text-center">
+				<div>
+					<div id="slide01_1">
+						<div>
+							<h1>TITLE</h1>
+							<img class="arrows arrows-down" id="arrowIntro" src="img/arrow.png"/>
+							<p>(cool background here)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /SLIDE 01 -->
+
+
+	<!-- SLIDE 02 -->
+	<div id="isTwo">
+		<div class="container global-width">
+			<div id="slide02">
+
+				<div id="slide02_1">
+					<div class="valign text-center">
+						<div>
+							<h2>Its no question college education is more expensive than ever before</h2>
+							<p>(InteractiveD3 Graph)</p>
+							<img src="img/mockup/4.png">
+						</div>
+					</div>	
+				</div>
+
+				<!-- NAV -->
+				<img class="arrows arrows-up" id="arrow02_01" src="img/arrowup.png"/>
+				<img class="arrows arrows-down" id="arrow02_03" src="img/arrow.png"/>
+			</div>
+		</div>
+	</div>
+	<!-- /SLIDE 02 -->
+
+
+	<!-- SLIDE 03 -->
+	<div id="isThree">
+	<div class="container">
+		<div id="slide03">
+
+			<div id="slide03_1">
+				<div class="valign text-center">
+					<div>
+						<div class="global-width">
+							<h2>This is how much a college education can leave you costing</h2>
+								<form id="valueCalc">
+									<p>Let's say you have $<input  id="principleAmt" type="text" name="principleAmt"/> out for a student loan. Your interest rate is <input  id="interestRate" type="text" name="interestRate"/>% and you can pay $<input  id="monthlyPay" type="text" name="monthlyPay"/> a month towards your loan.</p>
+									<h2 id="submit-button"><a>FIND OUT</a></h2>
+								</form>
+							<img src="img/mockup/6.png"/>
+						</div>
+					</div>
+				</div>			
+			</div>
+
+			<div id="slide03_2">
+				<div id="inputpage">
+					<div class="valign text-center">
+						<div>
+							<div class="global-width">
+								<form id="valueCalc">
+									<p>Let's say you have $<input  id="principleAmt" type="text" name="principleAmt"/> out for a student loan. Your interest rate is <input  id="interestRate" type="text" name="interestRate"/>% and you can pay $<input  id="monthlyPay" type="text" name="monthlyPay"/> a month towards your loan.</p>
+									<h2 id="submit-button"><a>FIND OUT</a></h2>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="outputpage">
+					<div class="valign text-center">
+						<div>
+							<div class="global-width">
+								<p>Over <span id="monthTot"></span> months you will end up paying a total of <span id="accrualAmt"></span>.</p>
+
+								<p>To bring that into perspective, that could be:</p>
+
+								<div id="items">
+								</div>
+
+								<h2 id="again-button"><a>TRY AGAIN</a></h2>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- NAV -->
+			<img class="arrows arrows-up" id="arrow03_02" src="img/arrowup.png"/>
+			<img class="arrows arrows-down" id="arrow03_04" src="img/arrow.png"/>
+
+
+		</div>
+	</div>
+	</div>
+	<!-- /SLIDE 03 -->
+
+
+	<!-- SLIDE 04 -->
+	<div id="isFour">
+	<div class="container">
+		<div id="slide04">
+
+
+			<div id="slide04_1">
+				<div class="valign text-center">
+					<div>
+						<div class="global-width">
+							<h1>How Did we get here?</h1>
+							<p>(it would be cool to have a moving background like the transition title slides in the food clock site)</p>
+						</div>
+					</div>
+				</div>			
+			</div>
+
+			<div id="slide04_2">
+				<div class="valign text-center">
+					<div>
+						<div class="global-width">
+							<p>words and divs and stuff 2</p>
+						</div>
+					</div>
+				</div>			
+			</div>
+
+			<div id="slide04_3">
+				<div class="valign text-center">
+					<div>
+						<div class="global-width">
+							<p>words and divs and stuff 3</p>
+						</div>
+					</div>
+				</div>			
+			</div>
+
+			<div id="slide04_4">
+				<div class="valign text-center">
+					<div>
+						<div class="global-width">
+							<p>words and divs and stuff 4</p>
+						</div>
+					</div>
+				</div>			
+			</div>
+
+			<!-- NAV -->
+			<img class="arrows arrows-up" id="arrow04_03" src="img/arrowup.png"/>
+			<img class="arrows arrows-down" id="arrow04_05" src="img/arrow.png"/>
+
+
+		</div>
+	</div>
+	</div>
+	<!-- /SLIDE 04 -->
+
+
+	<!-- SLIDE 05 -->
+	<div id="isFive">
+	<div class="container">
+		<div id="slide05">
+
+			<div id="slide05_1">
+				<div class="valign text-center">
+					<div>
+						<div class="global-width">
+							<h2>One of the main problems is that colleges shifted the way they get revenue</h2>
+							<p>(animated graphic- color inside will change levels)</p>
+							<img src="img/mockup/1.png">
+						</div>
+					</div>
+				</div>			
+			</div>
+
+			<div id="slide05_2">
+				<div class="valign text-center">
+					<div>
+						<div class="global-width">
+							<h2>Which is not surprising, as states drastically reduced education funding during the recession</h2>
+							<p>(D3 Graphic)</p>
+							<img src="img/mockup/7.png">
+						</div>
+					</div>
+				</div>			
+			</div>
+
+			<div id="slide05_3">
+				<div class="valign text-center">
+					<div>
+						<div class="global-width">
+							<h3>But, thats only been recently.</h3>
+							<h2>Perhaps one of the biggest problems is that Universities spend a lot of money to compete with each other.</h2>
+							<img src="img/mockup/3.png">
+							<p>see: Bowen Effect</p>
+							<p>(hovering over bowen effect will show a non-simplified definition)</p>
+						</div>
+					</div>
+				</div>			
+			</div>
+
+			<div id="slide05_4">
+				<div class="valign text-center">
+					<div>
+						<div class="global-width">
+							<h2>Which becomes a despicable trend:</h2>
+							<img src="img/mockup/9.png">
+							<p>see: Bennet Hypothesis</p>
+							<p>(these other things that will display in the speech bubble if you click the university-head person:)</p>
+							<ul>
+								<li>there is literally no incentive for us to stop.</li>
+								<li>what are we, non-profit?</li>
+								<li>and no one is stopping us?</li>
+							</ul>
+							<p>(hovering over Bennet Hypothesis will show a non-simplified definition)</p>
+						</div>
+					</div>
+				</div>			
+			</div>
+
+			<!-- NAV -->
+			<img class="arrows arrows-up" id="arrow05_04" src="img/arrowup.png"/>
+			<img class="arrows arrows-down" id="arrow05_06" src="img/arrow.png"/>
+
+			<img class="arrows arrows-left" id="arrow05l" src="img/arrowleft.png"/>
+			<img class="arrows arrows-right" id="arrow05r" src="img/arrowright.png"/>
+
+
+		</div>
+	</div>
+	</div>
+	<!-- /SLIDE 05 -->
+
+
+	<!-- SLIDE 06 -->
+	<div id="isSix">
+	<div class="container">
+		<div id="slide06">
+
+			<div id="slide06_1">
+				<div class="valign text-center">
+					<div>
+						<div class="global-width">
+							<h1>So what do we do?</h1>
+							<p>(transitional slide)</p>
+						</div>
+					</div>
+				</div>			
+			</div>
+
+			<div id="slide06_2">
+				<div class="valign text-center">
+					<div>
+						<div class="global-width">
+							<p>words and divs and stuff 2</p>
+						</div>
+					</div>
+				</div>			
+			</div>
+
+			<!-- NAV -->
+			<img class="arrows arrows-up" id="arrow06_05" src="img/arrowup.png"/>
+			<img class="arrows arrows-down" id="arrow06_07" src="img/arrow.png"/>
+
+		</div>
+	</div>
+	</div>
+	<!-- /SLIDE 06 -->
+
+
+	<!-- SLIDE 07 -->
+	<div id="isSeven">
+	<div class="container global-width">
+		<div id="slide07">
+			<div class="slide_title">
+				<div class="title_center">
+					<h1>6 <span class="title_name">SOLUTIONS</span></h1>
+				</div>
+			</div>
+
+			<div id="slide06_1">
+				<div class="valign text-center">
+					<div>
+						<div class="global-width">
+							<p>words and divs and stuff</p>
+						</div>
+					</div>
+				</div>			
+			</div>
+
+			<!-- NAV -->
+			<img class="arrows arrows-up" id="arrow07_06" src="img/arrowup.png"/>
+			<img class="arrows arrows-down" id="arrow07_08" src="img/arrow.png"/>
+		</div>
+	</div>
+	</div>
+	<!-- /SLIDE 07 -->
+
+
+	<!-- SLIDE 08 -->
+	<div id="isEight">
+	<div class="container global-width">
+		<div id="slide08">
+			<div class="slide_title">
+				<div class="title_center">
+					<h1>7 <span class="title_name">WHY CARE</span></h1>
+				</div>
+			</div>
+
+			<div id="slide06_1">
+				<div class="valign text-center">
+					<div>
+						<div class="global-width">
+							<p>words and divs and stuff</p>
+						</div>
+					</div>
+				</div>			
+			</div>
+
+			<!-- NAV -->
+			<img class="arrows arrows-up" id="arrow08_07" src="img/arrowup.png"/>
+			<img class="arrows arrows-down" id="arrow08_01" src="img/arrow.png"/>
+		</div>
+	</div>
+	</div>
+	<!-- /SLIDE 08 -->
+</body>
+</html>
