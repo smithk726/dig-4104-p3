@@ -127,12 +127,11 @@ p {
 	min-height: 700px;
 }
 #slide02_1 {
-	position: absolute;
-	top: 17%;
+
 }
 #slide02_1 .valign {
-	height:75vh;
-	min-height: 500px;
+	height:100vh;
+	min-height: 700px;
 }
 .everyone {
 	opacity: 0;
@@ -147,21 +146,19 @@ p {
 	min-height: 700px;
 }
 #slide03_1 {
-	position: absolute;
-	top: 17%;
+
 }
 #slide03_1 .valign {
-	height:75vh;
-	min-height: 500px;
+	height:100vh;
+	min-height: 700px;
 }
 
 #slide03_2 {
-	position: absolute;
-	top: 17%;
+
 }
 #slide03_2 .valign {
-	height:75vh;
-	min-height: 500px;
+	height:100vh;
+	min-height: 700px;
 }
 
 #valueCalc {
@@ -182,6 +179,11 @@ p {
 #outputpage {
 	display: none;
 	opacity: 0;
+}
+#outputhold {
+	display: block;
+	height: 216px;
+	margin-top: 30px;
 }
 #monthTot, #accrualAmt {
 	font-family: kilogram;

@@ -58,7 +58,7 @@ $(document).ready(function(){
 				//loop through array and get six random entries			
 				for (var i=0; i < 6; i++) {
 							
-					var itemvar = itemsArray.items[Math.floor(Math.random() * itemsArray.items.length)];
+					var itemvar = itemsArray.items[i];
 					
 					var finalamt = Math.floor(totalAccrual/itemvar.price);
 					
@@ -81,10 +81,8 @@ $(document).ready(function(){
 				   
 			});
 
-			$('#inputpage').hide('slide', {direction: 'up'}, 500, function(){
 				$('#outputpage').show();
 				$('#outputpage').delay(500).fadeTo(100,1);
-			});
 		}
 	});
 
