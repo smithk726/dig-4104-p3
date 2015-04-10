@@ -53,6 +53,10 @@ html, body {
 	font-family: kilogram;
 	src: url("fonts/KiloGram_KG.otf") format("opentype");
 }
+@font-face {
+	font-family: skarpal;
+	src: url("fonts/SkarpaLt.ttf") format("opentype");
+}
 h1 {
 	font-family: kilogram;
 	font-size: 80px;
@@ -60,9 +64,9 @@ h1 {
 	letter-spacing: 2px;
 }
 h2 {
-	font-family: kilogram;
+	font-family: 'Lato';
 	font-size: 50px;
-	font-weight: normal;
+	font-weight: 100;
 	letter-spacing: 2px;
 }
 p {
@@ -284,6 +288,18 @@ p {
 	
 }
 #slide08 .valign {
+	height:100vh;
+	min-height: 700px;
+}
+
+
+/************/
+/* SLIDE 09 */
+/************/
+#slide09 {
+	
+}
+#slide09 .valign {
 	height:100vh;
 	min-height: 700px;
 }
