@@ -10,7 +10,9 @@
 	<script src="js/pageswitch.js" type="text/javascript"></script>
 	<script src="js/calculator.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/d3/d3.min.js"></script>
+	<script type="text/javascript" src="js/1/tooltip.js"></script>
 
+	<link rel="stylesheet" type="text/css" href="js/1/tooltip.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
@@ -269,7 +271,40 @@
 							<h2>It can be done.</h2>
 							<p>Tuition in many parts of Europe is free, or almost free.</p>
 							<p>That's because their social culture embraces all levels of education as a right &mdash; not a privilege.</p>
-							<img src="img/mockup/2.png">
+							<div class="flaghold">
+								<img class="tooltip flagmargin" onmouseover="tooltip.pop(this, '#germanyinfo',{position:0})" src="img/flags/germany.png">
+								<img class="tooltip flagmargin" onmouseover="tooltip.pop(this, '#norwayinfo',{position:0})" src="img/flags/norway.png">
+								<img class="tooltip flagmargin" onmouseover="tooltip.pop(this, '#finlandinfo',{position:0})" src="img/flags/finland.png">
+								<img class="tooltip flagmargin" onmouseover="tooltip.pop(this, '#swedeninfo',{position:0})" src="img/flags/sweden.png">
+								<img class="tooltip" onmouseover="tooltip.pop(this, '#russiainfo',{position:0})" src="img/flags/russia.png">
+							</div>
+
+							<div style="display:none;">
+								<div id="germanyinfo">
+									<h4>Germany</h4>
+									<p class="toolinfo">Info here</p>
+								</div>
+
+								<div id="norwayinfo">
+									<h4>Norway</h4>
+									<p class="toolinfo">Info here</p>
+								</div>
+
+								<div id="finlandinfo">
+									<h4>Finland</h4>
+									<p class="toolinfo">Info here</p>
+								</div>
+
+								<div id="swedeninfo">
+									<h4>Sweden</h4>
+									<p class="toolinfo">Info here</p>
+								</div>
+
+								<div id="russiainfo">
+									<h4>Russia</h4>
+									<p class="toolinfo">Info here</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>			
