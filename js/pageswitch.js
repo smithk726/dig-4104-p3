@@ -6,11 +6,20 @@ $(document).ready(function() {
 	$('#isSix').hide();
 	$('#isSeven').hide();
 	$('#isEight').hide();
+	$('#isNine').hide();
+	$('#isTen').hide();
+	$('#isEleven').hide();
+	$('#isTwelve').hide();
+	$('#isThirteen').hide();
+	$('#isFourteen').hide();
 
 	$('#slide03_2').hide();
 	$('#slide05_3').hide();
 	$('#slide05_4').hide();
 	$('#slide05_2').hide();
+	$('#slide07_3').hide();
+	$('#slide07_4').hide();
+	$('#slide07_2').hide();
 
 	var costClick = 0;
 	var muchClick = 1;
@@ -114,26 +123,26 @@ $(document).ready(function() {
 	$('#arrow05l').click(function(){
 		if(altClick == 0) {
 			$('#slide05_1').hide('slide', {direction: 'left'}, 500, function() {
-				$('#slide05_2').show('slide', {direction: 'right'}, 500);
-				altClick = 1;
-			});
-		}
-		if(altClick == 1) {
-			$('#slide05_2').hide('slide', {direction: 'left'}, 500, function() {
-				$('#slide05_3').show('slide', {direction: 'right'}, 500);
-				altClick = 2;
-			});
-		}
-		if(altClick == 2) {
-			$('#slide05_3').hide('slide', {direction: 'left'}, 500, function() {
 				$('#slide05_4').show('slide', {direction: 'right'}, 500);
 				altClick = 3;
 			});
 		}
-		if(altClick == 3) {
-			$('#slide05_4').hide('slide', {direction: 'left'}, 500, function() {
+		if(altClick == 1) {
+			$('#slide05_2').hide('slide', {direction: 'left'}, 500, function() {
 				$('#slide05_1').show('slide', {direction: 'right'}, 500);
 				altClick = 0;
+			});
+		}
+		if(altClick == 2) {
+			$('#slide05_3').hide('slide', {direction: 'left'}, 500, function() {
+				$('#slide05_2').show('slide', {direction: 'right'}, 500);
+				altClick = 1;
+			});
+		}
+		if(altClick == 3) {
+			$('#slide05_4').hide('slide', {direction: 'left'}, 500, function() {
+				$('#slide05_3').show('slide', {direction: 'right'}, 500);
+				altClick = 2;
 			});
 		}
 	});
@@ -141,26 +150,26 @@ $(document).ready(function() {
 	$('#arrow05r').click(function(){
 		if(altClick == 0) {
 			$('#slide05_1').hide('slide', {direction: 'right'}, 500, function() {
-				$('#slide05_4').show('slide', {direction: 'left'}, 500);
-				altClick = 3;
-			});
-		}
-		if(altClick == 1) {
-			$('#slide05_2').hide('slide', {direction: 'right'}, 500, function() {
-				$('#slide05_1').show('slide', {direction: 'left'}, 500);
-				altClick = 0;
-			});
-		}
-		if(altClick == 2) {
-			$('#slide05_3').hide('slide', {direction: 'right'}, 500, function() {
 				$('#slide05_2').show('slide', {direction: 'left'}, 500);
 				altClick = 1;
 			});
 		}
-		if(altClick == 3) {
-			$('#slide05_4').hide('slide', {direction: 'right'}, 500, function() {
+		if(altClick == 1) {
+			$('#slide05_2').hide('slide', {direction: 'right'}, 500, function() {
 				$('#slide05_3').show('slide', {direction: 'left'}, 500);
 				altClick = 2;
+			});
+		}
+		if(altClick == 2) {
+			$('#slide05_3').hide('slide', {direction: 'right'}, 500, function() {
+				$('#slide05_4').show('slide', {direction: 'left'}, 500);
+				altClick = 3;
+			});
+		}
+		if(altClick == 3) {
+			$('#slide05_4').hide('slide', {direction: 'right'}, 500, function() {
+				$('#slide05_1').show('slide', {direction: 'left'}, 500);
+				altClick = 0;
 			});
 		}
 	});
@@ -192,6 +201,60 @@ $(document).ready(function() {
 			$('#isEight').show('slide', {direction: 'down'}, 500);
 		});
 	});
+	//arrow slide07 left
+	$('#arrow07l').click(function(){
+		if(altClick == 0) {
+			$('#slide07_1').hide('slide', {direction: 'left'}, 500, function() {
+				$('#slide07_4').show('slide', {direction: 'right'}, 500);
+				altClick = 3;
+			});
+		}
+		if(altClick == 1) {
+			$('#slide07_2').hide('slide', {direction: 'left'}, 500, function() {
+				$('#slide07_1').show('slide', {direction: 'right'}, 500);
+				altClick = 0;
+			});
+		}
+		if(altClick == 2) {
+			$('#slide07_3').hide('slide', {direction: 'left'}, 500, function() {
+				$('#slide07_2').show('slide', {direction: 'right'}, 500);
+				altClick = 1;
+			});
+		}
+		if(altClick == 3) {
+			$('#slide07_4').hide('slide', {direction: 'left'}, 500, function() {
+				$('#slide07_3').show('slide', {direction: 'right'}, 500);
+				altClick = 2;
+			});
+		}
+	});
+	//arrow slide07 right
+	$('#arrow07r').click(function(){
+		if(altClick == 0) {
+			$('#slide07_1').hide('slide', {direction: 'right'}, 500, function() {
+				$('#slide07_2').show('slide', {direction: 'left'}, 500);
+				altClick = 1;
+			});
+		}
+		if(altClick == 1) {
+			$('#slide07_2').hide('slide', {direction: 'right'}, 500, function() {
+				$('#slide07_3').show('slide', {direction: 'left'}, 500);
+				altClick = 2;
+			});
+		}
+		if(altClick == 2) {
+			$('#slide07_3').hide('slide', {direction: 'right'}, 500, function() {
+				$('#slide07_4').show('slide', {direction: 'left'}, 500);
+				altClick = 3;
+			});
+		}
+		if(altClick == 3) {
+			$('#slide07_4').hide('slide', {direction: 'right'}, 500, function() {
+				$('#slide07_1').show('slide', {direction: 'left'}, 500);
+				altClick = 0;
+			});
+		}
+	});
 
 
 	//arrow slide08 up
@@ -200,9 +263,93 @@ $(document).ready(function() {
 			$('#isSeven').show('slide', {direction: 'up'}, 500);
 		});
 	});
-	//arrow slide08 to slide01
-	$('#arrow08_01').click(function() {
+	//arrow slide08 down
+	$('#arrow08_09').click(function() {
 		$('#isEight').hide('slide', {direction: 'up'}, 500, function(){
+			$('#isNine').show('slide', {direction: 'down'}, 500);
+		});
+	});
+
+
+	//arrow slide09 up
+	$('#arrow09_08').click(function() {
+		$('#isNine').hide('slide', {direction: 'down'}, 500, function(){
+			$('#isEight').show('slide', {direction: 'up'}, 500);
+		});
+	});
+	//arrow slide09 down
+	$('#arrow09_10').click(function() {
+		$('#isNine').hide('slide', {direction: 'up'}, 500, function(){
+			$('#isTen').show('slide', {direction: 'down'}, 500);
+		});
+	});
+
+
+	//arrow slide10 up
+	$('#arrow10_09').click(function() {
+		$('#isTen').hide('slide', {direction: 'down'}, 500, function(){
+			$('#isNine').show('slide', {direction: 'up'}, 500);
+		});
+	});
+	//arrow slide10 down
+	$('#arrow10_11').click(function() {
+		$('#isTen').hide('slide', {direction: 'up'}, 500, function(){
+			$('#isEleven').show('slide', {direction: 'down'}, 500);
+		});
+	});
+
+
+	//arrow slide11 up
+	$('#arrow11_10').click(function() {
+		$('#isEleven').hide('slide', {direction: 'down'}, 500, function(){
+			$('#isTen').show('slide', {direction: 'up'}, 500);
+		});
+	});
+	//arrow slide11 down
+	$('#arrow11_12').click(function() {
+		$('#isEleven').hide('slide', {direction: 'up'}, 500, function(){
+			$('#isTwelve').show('slide', {direction: 'down'}, 500);
+		});
+	});
+
+
+	//arrow slide12 up
+	$('#arrow12_11').click(function() {
+		$('#isTwelve').hide('slide', {direction: 'down'}, 500, function(){
+			$('#isEleven').show('slide', {direction: 'up'}, 500);
+		});
+	});
+	//arrow slide12 down
+	$('#arrow12_13').click(function() {
+		$('#isTwelve').hide('slide', {direction: 'up'}, 500, function(){
+			$('#isThirteen').show('slide', {direction: 'down'}, 500);
+		});
+	});
+
+
+	//arrow slide13 up
+	$('#arrow13_12').click(function() {
+		$('#isThirteen').hide('slide', {direction: 'down'}, 500, function(){
+			$('#isTwelve').show('slide', {direction: 'up'}, 500);
+		});
+	});
+	//arrow slide13 down
+	$('#arrow13_14').click(function() {
+		$('#isThirteen').hide('slide', {direction: 'up'}, 500, function(){
+			$('#isFourteen').show('slide', {direction: 'down'}, 500);
+		});
+	});	
+
+
+	//arrow slide14 up
+	$('#arrow14_13').click(function() {
+		$('#isFourteen').hide('slide', {direction: 'down'}, 500, function(){
+			$('#isThirteen').show('slide', {direction: 'up'}, 500);
+		});
+	});
+	//arrow slide14 to slide01
+	$('#arrow14_01').click(function() {
+		$('#isFourteen').hide('slide', {direction: 'up'}, 500, function(){
 			$('#isOne').show('slide', {direction: 'down'}, 500);
 		});
 	});
