@@ -7,6 +7,8 @@ $(document).ready(function() {
 	$('#isSeven').hide();
 	$('#isEight').hide();
 	$('#isNine').hide();
+	$('#isTen').hide();
+	$('#isEleven').hide();
 
 	$('#slide03_2').hide();
 	$('#slide05_3').hide();
@@ -275,6 +277,34 @@ $(document).ready(function() {
 	//arrow slide09 down
 	$('#arrow09_10').click(function() {
 		$('#isNine').hide('slide', {direction: 'up'}, 500, function(){
+			$('#isTen').show('slide', {direction: 'down'}, 500);
+		});
+	});
+
+
+	//arrow slide10 up
+	$('#arrow10_09').click(function() {
+		$('#isTen').hide('slide', {direction: 'down'}, 500, function(){
+			$('#isNine').show('slide', {direction: 'up'}, 500);
+		});
+	});
+	//arrow slide10 down
+	$('#arrow10_11').click(function() {
+		$('#isTen').hide('slide', {direction: 'up'}, 500, function(){
+			$('#isEleven').show('slide', {direction: 'down'}, 500);
+		});
+	});
+
+
+	//arrow slide11 up
+	$('#arrow11_10').click(function() {
+		$('#isEleven').hide('slide', {direction: 'down'}, 500, function(){
+			$('#isTen').show('slide', {direction: 'up'}, 500);
+		});
+	});
+	//arrow slide11 down
+	$('#arrow11_01').click(function() {
+		$('#isEleven').hide('slide', {direction: 'up'}, 500, function(){
 			$('#isOne').show('slide', {direction: 'down'}, 500);
 		});
 	});
