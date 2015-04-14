@@ -323,12 +323,15 @@ p {
 	height:100vh;
 	min-height: 700px;
 }
-
-#changingResponse {
+.changeingWordsHolder {
+	width:810px;
+	margin: 0 auto;
+}
+.changingResponse {
 	color: #FFBA00;
 	font-weight: bold;
+	width: 450px;
 }
-
 #ballandchain{
 	height: 300px;
 }

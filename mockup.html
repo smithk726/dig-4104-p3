@@ -13,6 +13,8 @@
 	<script type="text/javascript" src="js/1/tooltip.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="js/1/tooltip.css">
+	<link rel="stylesheet" type="text/css" href="css/col.css" />
+	<link rel="stylesheet" type="text/css" href="css/12cols.css" />
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
@@ -348,15 +350,50 @@
 					<div>
 						<div class="global-width">
 							<p>Right Now,<br>the recently-graduated are flocking to the safests jobs<br>with the most benefits.</p>
-							<h2>I can't afford to <span id="changingResponse">take chances</span></h2>
+							<div class="changeingWordsHolder">
+								<div class="col"><h2>I can't afford to</h2></div>
+								<div class="col">
+									<h2>
+										<span class="changingResponse" id="resp1">take chances.</span>
+										<span class="changingResponse" id="resp2">be innovative.</span>
+										<span class="changingResponse" id="resp3">be an entrepeneur.</span>
+									</h2>
+								</div>
+							</div>
 							<img id="ballandchain" src="img/mockup/11.png">
-
-							<ul>
-								<li>colored part will cycle through these messages:</li>
-								<li>be innovative</li>
-								<li>be an entrepeneur</li>
-							</ul>
 						</div>
+
+						<script type="text/javascript">
+							$(document).ready(function() {
+								var timer = setInterval(switchWords, 3000);
+
+								var counter = 1;
+
+								$('#resp2').hide();
+								$('#resp3').hide();
+
+								function switchWords() {
+									if (counter == 1) {
+										$('#resp1').hide('slide', {direction: 'up'}, '200', function() {
+											$('#resp2').show('slide', {direction: 'down'}, '200');
+											counter = 2;
+										});
+									}
+									if (counter == 2) {
+										$('#resp2').hide('slide', {direction: 'up'}, '200', function() {
+											$('#resp3').show('slide', {direction: 'down'}, '200');
+											counter = 3;
+										});
+									}
+									if (counter == 3) {
+										$('#resp3').hide('slide', {direction: 'up'}, '200', function() {
+											$('#resp1').show('slide', {direction: 'down'}, '200');
+											counter = 1;
+										});
+									}
+								}
+							});
+						</script>
 					</div>
 				</div>			
 			</div>			
