@@ -64,11 +64,11 @@ $(document).ready(function(){
 					
 					//add list items
 					if (finalamt >= 0) {
-						$('#items').append('<div class="commodity"><p><em>' + finalamt + ' ' + itemvar.name + 's</em></p></div>');
+						$('#items').append('<div class="commodity"><img src="img/icons/' + itemvar.img + '"/><p class="itemwords">' + finalamt + ' ' + itemvar.name + '</p></div>');
 					}
 					else {
 						var finalstrpamt = finalamt.toString();
-						$('#items').append('<div class="commodity"><p><em>' + finalstrpamt.substr(1) + ' ' + itemvar.name + 's</em></p></div>');
+						$('#items').append('<div class="commodity"><img src="../img/calc/140x140.gif"/><p><em>' + finalstrpamt.substr(1) + ' ' + itemvar.name + '&#39;s</em></p></div>');
 					}
 
 					$('#items .commodity').delay(500).each(function(i) {
