@@ -57,21 +57,24 @@ $(document).ready(function(){
 				
 				//loop through array and get six random entries			
 				for (var i=0; i < 6; i++) {
+					var finalamt=0;
 							
 					var itemvar = itemsArray.items[i];
 					
-					var finalamt = Math.floor(totalAccrual/itemvar.price);
+					finalamt = Math.floor(totalAccrual/itemvar.price);
+
+					
 					
 					//add list items
-					if (finalamt >= 0) {
-						$('#items').append('<div class="commodity"><img src="img/icons/' + itemvar.img + '"/><p class="itemwords">' + finalamt + ' ' + itemvar.name + '</p></div>');
+					if (i == 5) {
+						var f = new Fraction(totalAccrual,itemvar.price);
+						$('#items').append('<div class="commodity"><img src="img/icons/' + itemvar.img + '"/><p class="itemwords">' + f.numerator + '/' + f.denominator + ' ' + itemvar.name + '</p></div>');
 					}
 					else {
-						var finalstrpamt = finalamt.toString();
-						$('#items').append('<div class="commodity"><img src="../img/calc/140x140.gif"/><p><em>' + finalstrpamt.substr(1) + ' ' + itemvar.name + '&#39;s</em></p></div>');
+						$('#items').append('<div class="commodity"><img src="img/icons/' + itemvar.img + '"/><p class="itemwords">' + finalamt + ' ' + itemvar.name + '</p></div>');
 					}
 
-					$('#items .commodity').delay(500).each(function(i) {
+					$('#items .commodity').delay(1500).each(function(i) {
 						$(this).delay((i++)*500).fadeTo(1000,1);
 					});
 				
@@ -80,9 +83,10 @@ $(document).ready(function(){
 				}
 				   
 			});
-
+			$('#inputpage').hide('slide', {direction: 'up'}, 500, function(){
 				$('#outputpage').show();
-				$('#outputpage').delay(500).fadeTo(100,1);
+				$('#outputpage').delay(500).fadeTo(500,1);
+			});
 		}
 	});
 

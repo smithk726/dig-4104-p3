@@ -9,6 +9,7 @@
   	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   	<script type="text/javascript" src="http://jqueryrotate.googlecode.com/svn/trunk/jQueryRotate.js"></script>
 	<script src="js/pageswitch.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/fraction.js"></script>
 	<script src="js/calculator.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/d3/d3.min.js"></script>
 	<script type="text/javascript" src="js/1/tooltip.js"></script>
@@ -52,8 +53,6 @@
 					<div class="valign text-center">
 						<div>
 							<h2>It's no question college education is more expensive than ever before.</h2>
-							<p>(InteractiveD3 Graph)</p>
-							<img src="img/mockup/4.png">
 						</div>
 					</div>	
 				</div>
@@ -73,26 +72,34 @@
 		<div id="slide03">
 
 			<div id="slide03_1">
-				<div class="valign text-center">
-					<div>
-						<div class="global-width">
-							<h2>This is how much a college education can leave you costing.</h2>
-							<form id="valueCalc">
-								<p>If you have $<input  id="principleAmt" type="text" name="principleAmt"/> in student loans and your interest rate is <input  id="interestRate" type="text" name="interestRate"/>% <img class="tooltip flagmargin" onmouseover="tooltip.pop(this, 'Student loan interest rates range from 3.4% to 8.5%.',{position:0})" src="img/icons/info.png"/> and you can pay $<input  id="monthlyPay" type="text" name="monthlyPay"/> a month towards your loan...</p>
-								<h3 id="submit-button"><a>WHAT'S THE PRICE</a></h3>
-							</form>
-						</div>
-
-						<div class="global-width" id="outputhold">
-							<div id="outputpage">
-								<p>Over <span id="monthTot"></span> months you will pay a total of <span id="accrualAmt"></span>, or:</p>
-
-								<div id="items">
-								</div>
+				<div id="inputpage">
+					<div class="valign text-center">
+						<div>
+							<div class="global-width">
+								<h2>This is how much a college education can leave you costing.</h2>
+								<form id="valueCalc">
+									<p>If you have $<input  id="principleAmt" type="text" name="principleAmt"/> in student loans and your interest rate is <input  id="interestRate" type="text" name="interestRate"/>% <img class="tooltip flagmargin" onmouseover="tooltip.pop(this, 'Student loan interest rates range from 3.4% to 8.5%.',{position:0})" src="img/icons/info.png"/> and you can pay $<input  id="monthlyPay" type="text" name="monthlyPay"/> a month towards your loan...</p>
+									<h3 id="submit-button"><a>WHAT'S THE PRICE</a></h3>
+								</form>
 							</div>
 						</div>
 					</div>
-				</div>			
+				</div>
+
+				<div id="outputpage">
+					<div class="valign text-center">
+						<div>
+							<div class="global-width" id="outputhold">
+									<p>Over <span id="monthTot"></span> months you will pay a total of <span id="accrualAmt"></span>, or to bring it to perspective:</p>
+
+									<div id="items">
+									</div>
+
+									<h3 id="again-button"><a>TRY AGAIN</a></h3>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<!-- NAV -->
@@ -435,20 +442,39 @@
 					<div>
 						<div class="global-width">
 							<h2>A stifled graduating class is delaying:</h2>
-							<div id="markets">
-								<div>
-									<img src="">
-									<p>Buying their first car</p>
+
+							<div class="section group" id="markets">
+								<div class="col span_4_of_12">
+									<p>buying their first car,</p>
+									<div class="section group">
+										<div>
+											<p class="nomargin"><span id="buycar">only 11%</span></p>
+											<h5 class="stifledinfo">of 18-34 year olds buy their own vehicle</h5>
+										</div>
+									</div>
 								</div>
-								<div>
-									<img src="">
-									<p>moving out of their parents'</p>
+								<div class="col span_4_of_12">
+									<p>moving out of their parents',</p>
+									<div class="section group">
+										<div>
+											<p class="nomargin"><span id="athome">about 31%</span></p>
+											<h5 class="stifledinfo">of 18-34 year olds still live at home</h5>
+										</div>
+									</div>
 								</div>
-								<div>
-									<h2 id="k401">0% 401K</h2>
-									<p>saving up for retirement</p>
+								<div class="col span_4_of_12">
+									<p>saving up for retirement,</p>
+									<div class="section group">
+										<div>
+											<p class="nomargin"><span id="k401">$16,500</span></p>
+											<h5 class="stifledinfo">average 401k balance for 22-34 year olds</h5>
+										</div>
+									</div>
 								</div>
-							</div>	
+							</div>
+
+							<br><br>
+	
 							<p style="font-weight:bold;">sending ripples across the markets</p>
 							<img height="150px" src="img/mockup/10.png">
 						</div>

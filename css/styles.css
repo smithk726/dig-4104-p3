@@ -77,10 +77,22 @@ h4 {
 	font-weight: 100;
 	letter-spacing: 2px;
 }
+h5 {
+	font-family: 'Lato';
+	font-size: 20px;
+	font-weight: 100;
+}
 p {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	font-size: 30px;
+}
+.justifyit {
+	text-align: justify;
+}
+.nomargin {
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 .slide_title {
 	position: absolute;
@@ -221,7 +233,10 @@ p {
 }
 #outputhold {
 	display: block;
-	margin-top: 30px;
+}
+#items {
+	margin-top: 50px;
+	margin-bottom: 10px;
 }
 #monthTot, #accrualAmt {
 	font-size: 40px;
@@ -354,10 +369,17 @@ p {
 #markets p{
 	font-size: 1.5em;
 }
-
-#k401{
-	font-weight: bold;
-	color: #00746B;
+#buycar, #athome, #k401 {
+	font-weight: 600;
+	font-size: 50px;
+	margin: none;
+	color: #FFBA00;
+}
+.stifledinfo {
+	margin: 0 auto;
+	margin-top: 5px;
+	display: block;
+	width: 200px;
 }
 
 /************/
@@ -406,4 +428,29 @@ dd{
 
 dl{
 	margin-bottom: 40px;
+}
+
+path { 
+    stroke: #47c1be;
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: white;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+.axis text {
+	font: 'Open Sans';
+	color:white;
+	fill: white;
+    stroke: white;
+    stroke-opacity:0;
+}
+
+.y, .y1, .y2, .y3, .y4 {
+	color:white;
 }
