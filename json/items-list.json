@@ -1,16 +1,8 @@
 {"items":[
-
-{"name":"Item 1","id":"1","img":"itemobject1.jpg","price":"3.99"},
-{"name":"Item 2","id":"2","img":"itemobject2.jpg","price":"2.99"},
-{"name":"Item 3","id":"3","img":"itemobject3.jpg","price":"4.99"},
-{"name":"Item 4","id":"4","img":"itemobject4.jpg","price":"5.99"},
-{"name":"Item 5","id":"5","img":"itemobject5.jpg","price":"1.99"},
-{"name":"Item 6","id":"6","img":"itemobject6.jpg","price":"36.99"},
-{"name":"Item 7","id":"7","img":"itemobject7.jpg","price":"7.99"},
-{"name":"Item 8","id":"8","img":"itemobject8.jpg","price":"2.99"},
-{"name":"Item 9","id":"9","img":"itemobject9.jpg","price":"3.99"},
-{"name":"Item 10","id":"10","img":"itemobject10.jpg","price":"10.99"},
-{"name":"Item 11","id":"11","img":"itemobject11.jpg","price":"8.99"},
-{"name":"Item 12","id":"12","img":"itemobject12.jpg","price":"12.99"}
-
+	{"name":"Ramen Packs","id":"1","img":"ramen.png","price":"0.39"},
+	{"name":"Months of Netflix","id":"2","img":"netflix.png","price":"7.99"},
+	{"name":"Barrels of Oil","id":"3","img":"oil.png","price":"55.11"},
+	{"name":"Oculus Rift's","id":"4","img":"oculus.png","price":"350.00"},
+	{"name":"Tickets to 2016 Olympics","id":"5","img":"tickets.png","price":"1464.92"},
+	{"name":"Full House House's","id":"6","img":"fullhouse.png","price":"2865000.00"}
 ]}
