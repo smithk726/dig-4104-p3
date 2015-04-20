@@ -432,28 +432,3 @@ dd{
 dl{
 	margin-bottom: 40px;
 }
-
-path { 
-    stroke: #47c1be;
-    stroke-width: 2;
-    fill: none;
-}
-
-.axis path,
-.axis line {
-    fill: none;
-    stroke: white;
-    stroke-width: 1;
-    shape-rendering: crispEdges;
-}
-.axis text {
-	font: 'Open Sans';
-	color:white;
-	fill: white;
-    stroke: white;
-    stroke-opacity:0;
-}
-
-.y, .y1, .y2, .y3, .y4 {
-	color:white;
-}
