@@ -262,6 +262,9 @@ p {
 /************/
 /* SLIDE 04 */
 /************/
+#isFour {
+	background: url(../img/how_V3.svg) center top;
+}
 #slide04 {
 	
 }
