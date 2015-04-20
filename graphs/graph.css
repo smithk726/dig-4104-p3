@@ -1,0 +1,11 @@
+/* graph */
+
+.rickshaw_graph {
+	position: relative;
+}
+.rickshaw_graph svg {
+	display: block;	
+	overflow: hidden;
+}
+
+

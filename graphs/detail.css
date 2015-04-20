@@ -1,0 +1,98 @@
+.rickshaw_graph .detail {
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	background: rgba(0, 0, 0, 0.1);
+	bottom: 0;
+	width: 0px;
+	transition: opacity 0.25s linear;
+	-moz-transition: opacity 0.25s linear;
+	-o-transition: opacity 0.25s linear;
+	-webkit-transition: opacity 0.25s linear;
+}
+.rickshaw_graph .detail.inactive {
+	opacity: 0;
+}
+.rickshaw_graph .detail .item.active {
+	opacity: 0;
+}
+.rickshaw_graph .detail .x_label {
+	display: none;
+}
+.rickshaw_graph .detail .x_label.left {
+	display: none;
+}
+.rickshaw_graph .detail .x_label.right {
+	display: none;
+}
+.rickshaw_graph .detail .item {
+	position: absolute;
+	z-index: 2;
+	border-radius: 3px;
+	padding: 1em;
+	padding-left: 1.25em;
+	padding-right: 1.25em;
+	font-size: 20px;
+	font-family: 'Open Sans', sans-serif;
+	opacity: 0;
+	background: #ECEEE3;
+	color: black;
+	border: 1px solid #ECEEE3;
+	margin-left: 1em;
+	margin-right: 1em;
+	margin-top: -1em;
+	white-space: nowrap;
+}
+.rickshaw_graph .detail .item.left {
+	left: 0;
+}
+.rickshaw_graph .detail .item.right {
+	right: 0;
+}
+.rickshaw_graph .detail .item.active {
+	opacity: 1;
+	background: #ECEEE3;
+}
+.rickshaw_graph .detail .item:after {
+	position: absolute;
+	display: block;
+	width: 0;
+	height: 0;
+
+	content: "";
+
+	border: 5px solid transparent;
+}
+.rickshaw_graph .detail .item.left:after {
+	top: 1em;
+	left: -5px;
+	margin-top: -5px;
+	border-right-color: #ECEEE3;
+	border-left-width: 0;
+}
+.rickshaw_graph .detail .item.right:after {
+	top: 1em;
+	right: -5px;
+	margin-top: -5px;
+	border-left-color: #ECEEE3;
+	border-right-width: 0;
+}
+.rickshaw_graph .detail .dot {
+	width: 12px;
+	height: 12px;
+	margin-left: -3px;
+	margin-top: -8px;
+	border-radius: 5px;
+	position: absolute;
+	
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	background: #5DE1DA;
+
+	display: none;
+	background-clip: padding-box;
+}
+.rickshaw_graph .detail .dot.active {
+	display: block;
+}
