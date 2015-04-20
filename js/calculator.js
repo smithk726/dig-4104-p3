@@ -67,7 +67,8 @@ $(document).ready(function(){
 					
 					//add list items
 					if (i == 5) {
-						var f = new Fraction(totalAccrual,itemvar.price);
+						finalamt = (totalAccrual/itemvar.price).toFixed(2);
+						var f = new Fraction(finalamt);
 						$('#items').append('<div class="commodity"><img src="img/icons/' + itemvar.img + '"/><p class="itemwords">' + f.numerator + '/' + f.denominator + ' ' + itemvar.name + '</p></div>');
 					}
 					else {
