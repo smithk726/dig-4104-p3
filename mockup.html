@@ -15,6 +15,27 @@
 	<script type="text/javascript" src="js/rickshaw.js"></script>
 	<script type="text/javascript" src="js/1/tooltip.js"></script>
 
+	<script src="http://code.createjs.com/easeljs-0.7.1.min.js"></script>
+	<script src="http://code.createjs.com/tweenjs-0.5.1.min.js"></script>
+	<script src="http://code.createjs.com/movieclip-0.7.1.min.js"></script>
+	<script src="js/revenue.js"></script>
+
+	<script>
+		var canvas, stage, exportRoot;
+
+		function init() {
+			canvas = document.getElementById("canvas");
+			exportRoot = new lib.revenue_V2();
+
+			stage = new createjs.Stage(canvas);
+			stage.addChild(exportRoot);
+			stage.update();
+
+			createjs.Ticker.setFPS(lib.properties.fps);
+			createjs.Ticker.addEventListener("tick", stage);
+		}
+	</script>
+
 	<link rel="stylesheet" type="text/css" href="js/1/tooltip.css">
 	<link rel="stylesheet" type="text/css" href="css/col.css" />
 	<link rel="stylesheet" type="text/css" href="css/12cols.css" />
@@ -47,20 +68,21 @@
 
 </head>
 
-<body>
+<body onload="init();">
 	<!-- SLIDE 01 -->
 	<div class="container global-width" id="isOne">
 		<div id="slide01">
 			<div class="valign text-center">
 				<div>
-					<div id="slide01_1">
-						<div>
-							<h1 style="margin-bottom:-10px">The High Cost of College</h1>
-							<img class="arrows arrows-up" id="arrowOutro" src="img/arrowup.png"/>
-							<img class="arrows arrows-down" id="arrowIntro" src="img/arrow.png"/>
-							<img src="img/logo.png"/>
-						</div>
+					<!-- <div id="titlediv">
+						<h1 style="margin-bottom:-10px" id="titlewords">The High Cost of College</h1>
+					</div> -->
+					<div >
+						<img  src="img/logo2.png"/>
 					</div>
+
+					<img class="arrows arrows-up" id="arrowOutro" src="img/arrowup.png"/>
+					<img class="arrows arrows-down" id="arrowIntro" src="img/arrow.png"/>
 				</div>
 			</div>
 		</div>
@@ -233,7 +255,7 @@
 							<div class="global-width">
 								<h2>This is how much a college education can leave you costing.</h2>
 								<form id="valueCalc">
-									<p>If you have $<input  id="principleAmt" type="text" name="principleAmt"/> in student loans and your interest rate is <input  id="interestRate" type="text" name="interestRate"/>% <img class="tooltip flagmargin" onmouseover="tooltip.pop(this, 'Student loan interest rates range from 3.4% to 8.5%.',{position:0})" src="img/icons/info.png"/> and you can pay $<input  id="monthlyPay" type="text" name="monthlyPay"/> a month towards your loan...</p>
+									<p>If you have $<input  id="principleAmt" type="text" name="principleAmt"/> in student loans and your interest rate is <br><input  id="interestRate" type="text" name="interestRate" style="text-align:right"/>% <img class="tooltip flagmargin" onmouseover="tooltip.pop(this, 'Student loan interest rates range from 3.4% to 8.5%.',{position:0})" src="img/icons/info.png"/> and you can pay $<input  id="monthlyPay" type="text" name="monthlyPay"/> a month towards your loan...</p>
 									<h3 id="submit-button"><a>WHAT'S THE PRICE</a></h3>
 								</form>
 							</div>
@@ -305,8 +327,7 @@
 					<div>
 						<div class="global-width">
 							<h2>One of the main problems is that colleges shifted the way they get revenue.</h2>
-							<p>(animated graphic- color inside will change levels)</p>
-							<img src="img/mockup/1.png">
+							<canvas id="canvas" width="960" height="400"></canvas>
 						</div>
 					</div>
 				</div>			
@@ -348,12 +369,16 @@
 				<div class="valign text-center">
 					<div>
 						<div style="position:relative" class="global-width">
-							<h2 style="margin-bottom:15px">Which becomes a despicable trend:</h2>
+							<p style="margin-bottom:3px">This increase in spending leads to an increase in tuition</p>
+							<h2 style="margin-bottom:15px; margin-top:5px;">which becomes a <span style="color:#f87c00">despicable</span> trend.</h2>
 							<div id="centerrotatearrows">
 								<div id="rotatearrowwords">
-									<p style="font-weight: 600; margin-bottom:5px;">An increse in spending leads to an increase in tuition,</p>
-									<p style="font-size:20px; margin-top:0px;">and there's no incentive for colleges to stop.</p>
-									<img src="img/graphics/tutitionstats.png"/>
+									<p style="height:70px;">
+										<span id="pres1">Keep going!</span>
+										<span id="pres2">There's no reason <br>for us to stop!</span>
+										<span id="pres3">What are we, <br>non-profit?</span>
+									</p>
+									<img src="img/graphics/150x150.gif"/>
 								</div>
 							</div>
 							<img id="rotatearrows" src="img/graphics/rotatearrows.png">
@@ -367,6 +392,38 @@
       								angle+=.1;
     								$("#rotatearrows").rotate(angle);
 								},10);
+							});
+						</script>
+
+						<script type="text/javascript">
+							$(document).ready(function() {
+								var timer = setInterval(switchWords2, 3000);
+
+								var counter_pres = 1;
+
+								$('#pres2').hide();
+								$('#pres3').hide();
+
+								function switchWords2() {
+									if (counter_pres == 1) {
+										$('#pres1').hide('slide', {direction: 'down'}, '200', function() {
+											$('#pres2').show('slide', {direction: 'up'}, '200');
+											counter_pres = 2;
+										});
+									}
+									if (counter_pres == 2) {
+										$('#pres2').hide('slide', {direction: 'down'}, '200', function() {
+											$('#pres3').show('slide', {direction: 'up'}, '200');
+											counter_pres = 3;
+										});
+									}
+									if (counter_pres == 3) {
+										$('#pres3').hide('slide', {direction: 'down'}, '200', function() {
+											$('#pres1').show('slide', {direction: 'up'}, '200');
+											counter_pres = 1;
+										});
+									}
+								}
 							});
 						</script>
 
@@ -429,7 +486,7 @@
 					<div>
 						<div class="global-width">
 							<h2>We can have the government pay for it.</h2>
-							<h2>They already pay for K-12. Whats four more years?</h2>
+							<h2>They already pay for K-12. What's four more years?</h2>
 						</div>
 					</div>
 				</div>			

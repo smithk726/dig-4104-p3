@@ -58,24 +58,25 @@ h1 {
 	font-size: 80px;
 	font-weight: normal;
 	letter-spacing: 2px;
+	color: #fcc100;
 }
 h2 {
 	font-family: 'Lato';
 	font-size: 50px;
-	font-weight: 100;
-	letter-spacing: 2px;
+	font-weight: normal;
+	letter-spacing: 1px;
 }
 h3 {
 	font-family: 'Lato';
 	font-size: 36px;
-	font-weight: 100;
-	letter-spacing: 2px;
+	font-weight: normal;
+	letter-spacing: 1px;
 }
 h4 {
 	font-family: 'Lato';
 	font-size: 26px;
 	font-weight: 100;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 }
 h5 {
 	font-family: 'Lato';
@@ -83,8 +84,8 @@ h5 {
 	font-weight: 100;
 }
 p {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
 	font-size: 30px;
 }
 .justifyit {
@@ -137,7 +138,9 @@ p {
 	min-height: 700px;
 	position: relative;
 }
-
+#isOne {
+	position: relative;
+}
 #slide01 {
 	height:100vh;
 	min-height: 700px;
@@ -158,6 +161,28 @@ p {
     display:table-cell;
     vertical-align:middle;
     width:100%;
+}
+
+#titlediv {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	z-index:1;
+}
+#titleimgdiv {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	z-index:2;
+}
+#titlewords {
+	position: relative;
+	font-size: 60px;
+	left: -50%;
+}
+#titleimg {
+	position: relative;
+	left: -50%;
 }
 
 
@@ -289,10 +314,9 @@ p {
 }
 #centerrotatearrows {
 	position: absolute;
-	top:24%;
+	top: 30%;
 	left: 50%;
 	z-index:1;
-	width: 300px;
 }
 #rotatearrowwords {
 	position: relative;
