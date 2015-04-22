@@ -2,19 +2,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>text_animate</title>
+<title>revenue</title>
 
 <script src="http://code.createjs.com/easeljs-0.7.1.min.js"></script>
 <script src="http://code.createjs.com/tweenjs-0.5.1.min.js"></script>
 <script src="http://code.createjs.com/movieclip-0.7.1.min.js"></script>
-<script src="text_animate.js"></script>
+<script src="js/revenue.js"></script>
 
 <script>
 var canvas, stage, exportRoot;
 
 function init() {
 	canvas = document.getElementById("canvas");
-	exportRoot = new lib.revenue();
+	exportRoot = new lib.revenue_V2();
 
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
