@@ -107,6 +107,7 @@ $(document).ready(function() {
 				$('#slide05_1').show('slide', {direction: 'left'}, 500);
 				altClick = 0;
 				$('#arrow05l').hide('slide', {direction: 'left'}, 200);
+				init();
 			});
 		}
 		if(altClick == 2) {

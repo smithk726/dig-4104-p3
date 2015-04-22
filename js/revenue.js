@@ -32,8 +32,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,482.6,151.2);
 
 // stage content:
 (lib.revenue_V2 = function(mode,startPosition,loop) {
-//if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
-	this.initialize(mode,startPosition,loop,{});
+if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
+//	this.initialize(mode,startPosition,loop,{});
 
 	// Text Mask (mask)
 	var mask = new cjs.Shape();
