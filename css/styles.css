@@ -50,15 +50,33 @@ html, body {
 	text-align: center;
 }
 @font-face {
+	font-family: code;
+	src: url("fonts/codebold.otf") format("opentype");
+}
+@font-face {
+	font-family: nevis;
+	src: url("fonts/nevis.ttf") format("truetype");
+}
+@font-face {
 	font-family: kilogram;
-	src: url("fonts/KiloGram_KG.otf") format("opentype");
+	src: url("fonts/Sematary.ttf") format("truetype");
 }
 h1 {
+	font-family: nevis;
+	font-size: 80px;
+	color: #fcc100;
+}
+.header1 {
 	font-family: kilogram;
 	font-size: 80px;
 	font-weight: normal;
 	letter-spacing: 2px;
-	color: #fcc100;
+}
+.header2 {
+	font-family: code;
+	font-size: 80px;
+	line-height: 1;
+	font-weight: bold;
 }
 h2 {
 	font-family: 'Lato';
@@ -288,12 +306,14 @@ p {
 /* SLIDE 04 */
 /************/
 #isFour {
-	background: url(../img/how_V3.svg) center top;
+	background: url(../img/how_V3.svg) 75% 10%;
 }
-#slide04 {
-	
+.transitionwords {
+	width: 500px;
+	float: right;
+	margin-top: 5px;
 }
-#slide04 .valign {
+#slide04_1 .valign {
 	height:100vh;
 	min-height: 700px;
 }
@@ -408,7 +428,7 @@ p {
 }
 #buycar, #athome, #k401 {
 	font-weight: 600;
-	font-size: 50px;
+	font-size: 45px;
 	margin: none;
 	color: #FFBA00;
 }
