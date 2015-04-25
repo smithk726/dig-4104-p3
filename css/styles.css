@@ -50,33 +50,35 @@ html, body {
 	text-align: center;
 }
 @font-face {
-	font-family: code;
-	src: url("fonts/codebold.otf") format("opentype");
+	font-family: AlteHaasGroteskBold;
+	src: url("fonts/AlteHaasGroteskBold.ttf") format("truetype");
 }
 @font-face {
-	font-family: nevis;
-	src: url("fonts/nevis.ttf") format("truetype");
-}
-@font-face {
-	font-family: kilogram;
-	src: url("fonts/Sematary.ttf") format("truetype");
+	font-family: telegrafico;
+	src: url("fonts/telegrafico.ttf") format("truetype");
 }
 h1 {
-	font-family: nevis;
+	font-family: AlteHaasGroteskBold;
 	font-size: 80px;
 	color: #fcc100;
+	line-height: 1;
 }
 .header1 {
-	font-family: kilogram;
+	font-family: telegrafico;
 	font-size: 80px;
 	font-weight: normal;
 	letter-spacing: 2px;
 }
 .header2 {
-	font-family: code;
+	font-family: 'Lato';
 	font-size: 80px;
+	font-weight: 800;
 	line-height: 1;
-	font-weight: bold;
+	letter-spacing: 2px;
+}
+.header3 {
+	font-family: 'Open Sans';
+	font-weight: 800;
 }
 h2 {
 	font-family: 'Lato';
@@ -311,7 +313,6 @@ p {
 .transitionwords {
 	width: 500px;
 	float: right;
-	margin-top: 5px;
 }
 #slide04_1 .valign {
 	height:100vh;
@@ -329,6 +330,10 @@ p {
 	height:100vh;
 	min-height: 700px;
 }
+/*#slide05_3 {
+	background: url(../img/graphics/slide_rc.svg) center;
+	background-position: cover;
+}*/
 #slide05_4 {
 	position: relative;
 }
@@ -357,8 +362,8 @@ p {
 /************/
 /* SLIDE 06 */
 /************/
-#slide06 {
-	
+#isSix {
+	background: url(../img/what.svg) 85% 10%;
 }
 #slide06 .valign {
 	height:100vh;
