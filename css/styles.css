@@ -314,11 +314,21 @@ p {
 }
 #centerrotatearrows {
 	position: absolute;
-	top: 30%;
+	top: 28%;
+	left: 50%;
+	z-index:1;
+}
+#centerrotatearrowsimg {
+	position: absolute;
+	top: 47%;
 	left: 50%;
 	z-index:1;
 }
 #rotatearrowwords {
+	position: relative;
+	left: -50%;
+}
+#rotatearrowimg {
 	position: relative;
 	left: -50%;
 }

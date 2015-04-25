@@ -201,6 +201,7 @@ $(document).ready(function() {
 			$('#slide07_3').hide('slide', {direction: 'right'}, 500, function() {
 				$('#slide07_2').show('slide', {direction: 'left'}, 500);
 				solClick = 1;
+				init2();
 			});
 		}
 		if(solClick == 3) {
@@ -218,6 +219,7 @@ $(document).ready(function() {
 				$('#slide07_2').show('slide', {direction: 'right'}, 500);
 				solClick = 1;
 				$('#arrow07l').show('slide', {direction: 'left'}, 500);
+				init2();
 			});
 		}
 		if(solClick == 1) {

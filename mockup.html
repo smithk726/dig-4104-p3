@@ -18,6 +18,7 @@
 	<script src="http://code.createjs.com/tweenjs-0.5.1.min.js"></script>
 	<script src="http://code.createjs.com/movieclip-0.7.1.min.js"></script>
 	<script src="js/revenue.js"></script>
+	<script src="js/map.js"></script>
 
 	<script>
 		var canvas, stage, exportRoot;
@@ -32,6 +33,22 @@
 
 			createjs.Ticker.setFPS(lib.properties.fps);
 			createjs.Ticker.addEventListener("tick", stage);
+		}
+	</script>
+
+	<script>
+		var canvas2, stage2, exportRoot2;
+
+		function init2() {
+			canvas2 = document.getElementById("canvas2");
+			exportRoot2 = new lib.map();
+
+			stage2 = new createjs.Stage(canvas2);
+			stage2.addChild(exportRoot2);
+			stage2.update();
+
+			createjs.Ticker.setFPS(lib.properties.fps);
+			createjs.Ticker.addEventListener("tick", stage2);
 		}
 	</script>
 
@@ -377,7 +394,12 @@
 										<span id="pres2">There's no reason <br>for us to stop!</span>
 										<span id="pres3">What are we, <br>non-profit?</span>
 									</p>
-									<img src="img/graphics/150x150.gif"/>
+								</div>
+							</div>
+
+							<div id="centerrotatearrowsimg">
+								<div id="rotatearrowimg">
+									<img src="img/graphics/oldguy.png"/>
 								</div>
 							</div>
 							<img id="rotatearrows" src="img/graphics/rotatearrows.png">
@@ -473,7 +495,7 @@
 
 			<!-- NAV -->
 			<img class="arrows arrows-up" id="arrow06_05" src="img/arrowup.png" onclick="init();"/>
-			<img class="arrows arrows-down" id="arrow06_07" src="img/arrow.png"/>
+			<img class="arrows arrows-down" id="arrow06_07" src="img/arrow.png" onclick="init2();"/>
 
 		</div>
 	</div>
@@ -503,8 +525,7 @@
 						<div class="global-width">
 							<h2>Chicago and Tennessee have done just this, with community college.</h2>
 							<h2>It's a beginning.</h2>
-							<p>(animated graphic- each state will join the highlighted color one-by-one)</p>
-							<img src="img/mockup/5.png">
+							<canvas id="canvas2" width="960" height="600"></canvas>
 						</div>
 					</div>
 				</div>			
@@ -516,7 +537,7 @@
 						<div class="global-width">
 							<p>&ldquo;I want to spread that idea all across America, so that two years of college becomes as free and universal in America as high school is today.&rdquo;</p>
 							<p>&ndash; President Obama at the 2015 State of The Union Address</p>
-							<img height="300" src="img/mockup/imrs.jpg">
+							<img src="img/graphics/obama.png" alt="obama"/>
 						</div>
 					</div>
 				</div>			
@@ -640,7 +661,7 @@
 			</div>			
 
 			<!-- NAV -->
-			<img class="arrows arrows-up" id="arrow08_07" src="img/arrowup.png"/>
+			<img class="arrows arrows-up" id="arrow08_07" src="img/arrowup.png" onclick="init2();"/>
 			<img class="arrows arrows-down" id="arrow08_09" src="img/arrow.png"/>
 		</div>
 	</div>
