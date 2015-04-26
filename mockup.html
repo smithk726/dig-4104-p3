@@ -19,6 +19,7 @@
 	<script src="http://code.createjs.com/movieclip-0.7.1.min.js"></script>
 	<script src="js/revenue.js"></script>
 	<script src="js/map.js"></script>
+	<script type="text/javascript" src="js/columnChart.js"></script>
 
 	<script>
 		var canvas, stage, exportRoot;
@@ -65,22 +66,83 @@
 
 	<style type="text/css">
 
-			.rickshaw_graph {
-				position: absolute;
-				top: 30px;
-				left: 74px;
-				margin-left: 100px;
-			}
-			.rickshaw_graph svg {
-				position: absolute;
-			}
+		.rickshaw_graph {
+			position: absolute;
+			top: 30px;
+			left: 74px;
+			margin-left: 100px;
+		}
+		.rickshaw_graph svg {
+			position: absolute;
+		}
 
-			#axes{
-				position: relative;
-			}
+		#axes{
+			position: relative;
+		}
 
+		.chart rect {
+		  stroke: white;
+		  fill-opacity: .6;
+		  fill: steelblue;
 
-		</style>
+		}
+		
+		.bar.positive {
+		  fill: #FFD000;
+		}
+		.bar.positiveH {
+		  fill: #E8BA02;
+		}
+
+		.bar.negative {
+		  fill: #FF9D00;
+		}
+		.bar.negativeH {
+		  fill: #F67C01;
+		}
+
+		.axis text {
+		  fill: white;
+		  font: 18px sans-serif;
+
+		}
+
+		.axis path, .axis line {
+		  fill: none;
+		  stroke: #ECEEE3;
+		  stroke-width: 5px;
+		  shape-rendering: crispEdges;
+		}
+
+		#details{
+			position: absolute;
+			width: auto;
+			height: auto;
+			padding-left: 20px;
+			padding-right: 20px;
+			border-radius: 3px;
+
+			background-color: #ECEEE3;
+			pointer-events: none;
+			top: 60px;
+
+		}
+
+		#details p{
+			font-size: 18px;
+			font-family: sans-serif;
+			color: black;
+		}
+
+		.relative{
+			position: relative;
+		}
+
+		.hidden{
+			display: none;
+		}
+
+	</style>
 
 </head>
 
@@ -352,8 +414,36 @@
 					<div>
 						<div class="global-width">
 							<h2>Which is not surprising, as states drastically reduced education funding during the recession.</h2>
-							<p>(D3 Graph)</p>
-							<img src="img/mockup/7.png">
+
+							<div class="relative" id="bar">
+								<div  id="details" class="hidden">
+									<p id="percentage"></p>
+								</div>
+							</div>
+							<script>
+
+								var data = [
+									["Arizona",-50.4], ["New Hampshire",-49.9], ["Oregon",-43.6], ["Louisiana",-42], ["Florida",-41.2], 
+									["Alabama", -39.8], ["Idaho",-39.6], ["South Carolina",-38.8], ["Washington",-37.5], ["Massachusetts",-37.4], 
+									["New Mexico",-36.7], ["Mississippi",-32.4], ["Michigan",-32.4], ["Colorado",-32.3], ["Nevada",-31.2], 
+									["Utah",-30.6], ["Minnesota",-30.4], ["Tennessee",-30.1], ["Pennsylvania",-29.9], ["Missouri",-29.7], 
+									["Georgia",-29.5], ["California",-29.3], ["Ohio",-28.9], ["Virginia",-27.8], ["Iowa",-27.7], 
+									["New Jersey",-27.2], ["Kentucky",-26.3], ["Oklahoma",-26.2], ["Hawaii",-25.3], ["Delaware",-25],
+									["Rhode Island",-24.8], ["Kansas",-24.5], ["Illinois",-23.3], ["Connecticut",-23.1], ["Texas",-22.7], 
+									["South Dakota",-22.1], ["Arkansas",-18.9], ["Vermont",-18.6], ["Maryland",-18.3], ["West Virginia",-17.8], 
+									["Wisconsin",-17.5], ["Montana",-17.3], ["Indiana",-17.2], ["Nebraska",-16.6], ["Maine",-15.7], 
+									["New York",-14.7], ["North Carolina",-14.6], ["Alaska",-3.2], ["Wyoming",7.5], ["North Dakota",16.5]
+								];
+
+								d3.select("#bar")
+								  .datum(data)
+								    .call(columnChart()
+								      .width(960)
+								      .height(500)
+								      .x(function(d, i) { return d[0]; })
+								      .y(function(d, i) { return d[1]; }));
+
+							</script>
 						</div>
 					</div>
 				</div>			
