@@ -330,10 +330,10 @@ p {
 	height:100vh;
 	min-height: 700px;
 }
-/*#slide05_3 {
+#slide05_3 {
 	background: url(../img/graphics/slide_rc.svg) center;
 	background-position: cover;
-}*/
+}
 #slide05_4 {
 	position: relative;
 }
