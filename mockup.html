@@ -17,11 +17,13 @@
 	<script src="http://code.createjs.com/easeljs-0.7.1.min.js"></script>
 	<script src="http://code.createjs.com/tweenjs-0.5.1.min.js"></script>
 	<script src="http://code.createjs.com/movieclip-0.7.1.min.js"></script>
+	<script src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
 	<script src="js/revenue.js"></script>
 	<script src="js/map.js"></script>
 	<script src="js/how.js"></script>
 	<script src="js/radiate.js"></script>
 	<script src="js/what.js"></script>
+	<script src="js/rollercoaster.js"></script>
 	<script type="text/javascript" src="js/columnChart.js"></script>
 
 	<script>
@@ -57,6 +59,22 @@
 	</script>
 
 	<script>
+		var canvas3, stage3, exportRoot3;
+
+		function init3() {
+			canvas3 = document.getElementById("canvas3");
+			exportRoot3 = new lib.radiate();
+
+			stage3 = new createjs.Stage(canvas3);
+			stage3.addChild(exportRoot3);
+			stage3.update();
+
+			createjs.Ticker.setFPS(lib.properties.fps);
+			createjs.Ticker.addEventListener("tick", stage3);
+		}
+	</script>
+
+	<script>
 		var canvas4, stage4, exportRoot4;
 
 		function init4() {
@@ -85,6 +103,35 @@
 
 			createjs.Ticker.setFPS(lib.properties.fps);
 			createjs.Ticker.addEventListener("tick", stage5);
+		}
+	</script>
+
+	<script>
+		var canvas6, stage6, exportRoot6;
+
+		function init6() {
+			canvas6 = document.getElementById("canvas6");
+			images = images||{};
+
+			var loader = new createjs.LoadQueue(false);
+			loader.addEventListener("fileload", handleFileLoad);
+			loader.addEventListener("complete", handleComplete);
+			loader.loadManifest(lib.properties.manifest);
+		}
+
+		function handleFileLoad(evt) {
+			if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+		}
+
+		function handleComplete() {
+			exportRoot6 = new lib.rollercoaster();
+
+			stage6 = new createjs.Stage(canvas6);
+			stage6.addChild(exportRoot6);
+			stage6.update();
+
+			createjs.Ticker.setFPS(lib.properties.fps);
+			createjs.Ticker.addEventListener("tick", stage6);
 		}
 	</script>
 
@@ -180,7 +227,7 @@
 
 </head>
 
-<body onload="init4(); init5();">
+<body onload="init3(); init4(); init5(); init6();">
 	<!-- SLIDE 01 -->
 	<div class="container global-width" id="isOne">
 		<div id="slide01">
@@ -476,7 +523,8 @@
 			</div>
 
 			<div id="slide05_3">
-				<div class="valign text-center">
+				<canvas id="canvas6" width="1920" height="1080"></canvas>
+				<div class="valign text-center" style="z-index:2; position:absolute;">
 					<div>
 						<div class="global-width" style="background-color: rgba(0,0,0, .5); padding:8px;">
 							<h2>But, that's only been recently.</h2>
@@ -491,7 +539,7 @@
 							</div>
 						</div>
 					</div>
-				</div>			
+				</div>		
 			</div>
 
 			<div id="slide05_4">
@@ -817,7 +865,7 @@
 							</div>
 	
 							<p style="font-weight:bold;">sending ripples across the markets</p>
-							<img height="150px" src="img/mockup/10.png">
+							<canvas id="canvas3" width="550" height="180"></canvas>
 						</div>
 					</div>
 				</div>			
