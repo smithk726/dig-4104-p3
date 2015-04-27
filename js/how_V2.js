@@ -688,6 +688,19 @@ p.nominalBounds = new cjs.Rectangle(-1,-5.6,73.5,108.2);
 p.nominalBounds = new cjs.Rectangle(-126,-168.7,252.5,330.9);
 
 
+(lib.shadow_how = function() {
+	this.initialize();
+
+	// Layer 1
+	this.instance = new lib.Path();
+	this.instance.setTransform(397.8,83.9,1,1,0,0,0,397.7,83.9);
+	this.instance.alpha = 0.398;
+
+	this.addChild(this.instance);
+}).prototype = p = new cjs.Container();
+p.nominalBounds = new cjs.Rectangle(0,0,795.7,167.9);
+
+
 (lib.moneyPilecopy = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -1191,9 +1204,8 @@ p.nominalBounds = new cjs.Rectangle(-1,-132.7,289.7,751.3);
 	this.instance.setTransform(402.2,570.4,1,1,0,0,0,125.2,308.8);
 
 	// shadow
-	this.instance_1 = new lib.Path();
-	this.instance_1.setTransform(491.1,910.2,1,1,0,0,0,397.7,83.9);
-	this.instance_1.alpha = 0.398;
+	this.instance_1 = new lib.shadow_how("synched",0);
+	this.instance_1.setTransform(491.1,910.2,1,1,0,0,0,397.8,83.9);
 
 	// Layer 9
 	this.shape_102 = new cjs.Shape();
