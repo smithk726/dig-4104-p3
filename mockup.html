@@ -19,11 +19,13 @@
 	<script src="http://code.createjs.com/movieclip-0.7.1.min.js"></script>
 	<script src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
 	<script src="js/revenue.js"></script>
+	<script src="js/solution.js"></script>
 	<script src="js/map.js"></script>
-	<script src="js/how.js"></script>
+	<script src="js/how_v2.js"></script>
 	<script src="js/radiate.js"></script>
 	<script src="js/what.js"></script>
 	<script src="js/rollercoaster.js"></script>
+	<script src="js/logo.js"></script>
 	<script type="text/javascript" src="js/columnChart.js"></script>
 
 	<script>
@@ -79,7 +81,20 @@
 
 		function init4() {
 			canvas4 = document.getElementById("canvas4");
-			exportRoot4 = new lib.how();
+			images = images||{};
+
+			var loader = new createjs.LoadQueue(false);
+			loader.addEventListener("fileload", handleFileLoad4);
+			loader.addEventListener("complete", handleComplete4);
+			loader.loadManifest(lib.properties.manifest);
+		}
+
+		function handleFileLoad4(evt) {
+			if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+		}
+
+		function handleComplete4() {
+			exportRoot4 = new lib.how_V2();
 
 			stage4 = new createjs.Stage(canvas4);
 			stage4.addChild(exportRoot4);
@@ -114,16 +129,16 @@
 			images = images||{};
 
 			var loader = new createjs.LoadQueue(false);
-			loader.addEventListener("fileload", handleFileLoad);
-			loader.addEventListener("complete", handleComplete);
+			loader.addEventListener("fileload", handleFileLoad6);
+			loader.addEventListener("complete", handleComplete6);
 			loader.loadManifest(lib.properties.manifest);
 		}
 
-		function handleFileLoad(evt) {
+		function handleFileLoad6(evt) {
 			if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
 		}
 
-		function handleComplete() {
+		function handleComplete6() {
 			exportRoot6 = new lib.rollercoaster();
 
 			stage6 = new createjs.Stage(canvas6);
@@ -132,6 +147,51 @@
 
 			createjs.Ticker.setFPS(lib.properties.fps);
 			createjs.Ticker.addEventListener("tick", stage6);
+		}
+	</script>
+
+	<script>
+		var canvas7, stage7, exportRoot7;
+
+		function init7() {
+			canvas7 = document.getElementById("canvas7");
+			images = images||{};
+
+			var loader = new createjs.LoadQueue(false);
+			loader.addEventListener("fileload", handleFileLoad7);
+			loader.addEventListener("complete", handleComplete7);
+			loader.loadManifest(lib.properties.manifest);
+		}
+
+		function handleFileLoad7(evt) {
+			if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+		}
+
+		function handleComplete7() {
+			exportRoot7 = new lib.logo();
+
+			stage7 = new createjs.Stage(canvas7);
+			stage7.addChild(exportRoot7);
+			stage7.update();
+
+			createjs.Ticker.setFPS(lib.properties.fps);
+			createjs.Ticker.addEventListener("tick", stage7);
+		}
+	</script>
+
+	<script>
+		var canvas8, stage8, exportRoot8;
+
+		function init8() {
+			canvas8 = document.getElementById("canvas8");
+			exportRoot8 = new lib.solution();
+
+			stage8 = new createjs.Stage(canvas8);
+			stage8.addChild(exportRoot8);
+			stage8.update();
+
+			createjs.Ticker.setFPS(lib.properties.fps);
+			createjs.Ticker.addEventListener("tick", stage8);
 		}
 	</script>
 
@@ -227,20 +287,16 @@
 
 </head>
 
-<body onload="init3(); init4(); init5(); init6();">
+<body onload="init3(); init4(); init5(); init6(); init7(); init8();">
 	<!-- SLIDE 01 -->
 	<div class="container global-width" id="isOne">
 		<div id="slide01">
 			<div class="valign text-center">
 				<div>
-					<!-- <div id="titlediv">
-						<h1 style="margin-bottom:-10px" id="titlewords">The High Cost of College</h1>
-					</div> -->
 					<div >
-						<img  src="img/logo2.png"/>
+						<canvas id="canvas7" width="491" height="580"></canvas>
 					</div>
 
-<!-- 					<img class="arrows arrows-up" id="arrowOutro" src="img/arrowup.png"/> -->
 					<img class="arrows arrows-down" id="arrowIntro" src="img/arrow.png"/>
 				</div>
 			</div>
@@ -526,7 +582,7 @@
 
 			<div id="slide05_3">
 				<canvas id="canvas6" width="1920" height="1080"></canvas>
-				<div class="valign text-center" style="z-index:2; position:absolute;">
+				<div class="valign text-center" style="z-index:2; position:absolute; top:0;">
 					<div>
 						<div class="global-width" style="background-color: rgba(0,0,0, .5); padding:8px;">
 							<h2>But, that's only been recently.</h2>
@@ -885,15 +941,7 @@
 	<div class="container">
 		<div id="slide10">
 
-			<div id="slide10_1">
-				<div class="valign text-center">
-					<div>
-						<div class="global-width">
-							<h1>WE CAN DO BETTER</h1>
-						</div>
-					</div>
-				</div>			
-			</div>
+			<canvas id="canvas8" width="1920" height="1080"></canvas>
 
 			<!-- NAV -->
 			<img class="arrows arrows-up" id="arrow10_09" src="img/arrowup.png"/>

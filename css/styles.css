@@ -338,6 +338,7 @@ p {
 }
 #slide05_3 {
 	height: 100vh;
+	overflow: hidden;
 }
 #canvas6 {
 	margin: 0 auto; display: block;
@@ -461,11 +462,11 @@ p {
 /* SLIDE 10 */
 /************/
 #slide10 {
-	
+	height: 100vh;
+	overflow: hidden;
 }
-#slide10 .valign {
-	height:100vh;
-	min-height: 700px;
+#canvas8 {
+	margin: 0 auto; display: block;
 }
 
 
