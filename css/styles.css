@@ -21,6 +21,7 @@ html, body {
 	transition: opacity .25s ease-in-out;
 	-moz-transition: opacity .25s ease-in-out;
 	-webkit-transition: opacity .25s ease-in-out;
+	z-index: 9999;
 }
 .arrows-down {
 	position: absolute;
@@ -336,8 +337,14 @@ p {
 	min-height: 700px;
 }
 #slide05_3 {
-	background: url(../img/graphics/slide_rc.svg) center;
-	background-position: cover;
+	height: 100vh;
+	overflow: hidden;
+}
+#canvas6 {
+	position: fixed;
+	left: -20%;
+	top:0;
+
 }
 #slide05_4 {
 	position: relative;
