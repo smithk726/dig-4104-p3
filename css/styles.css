@@ -314,7 +314,8 @@ p {
 }
 #canvas4 {
 	position: relative;
-	left: -20%;
+	left: 0;
+	top: 0;
 }
 .transitionwords {
 	width: 500px;
@@ -338,11 +339,10 @@ p {
 }
 #slide05_3 {
 	height: 100vh;
-	overflow: hidden;
 }
 #canvas6 {
 	position: fixed;
-	left: -20%;
+	left: 0;
 	top:0;
 
 }
@@ -380,7 +380,7 @@ p {
 }
 #canvas5 {
 	position: relative;
-	left: -32%;
+	left: 0;
 }
 #slide06 .valign {
 	height:100vh;
