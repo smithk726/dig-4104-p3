@@ -477,8 +477,9 @@ p {
 /************/
 /* SLIDE 11 */
 /************/
-#slide11 {
-	
+#slide11 a{
+	text-decoration: none;
+	color: white;
 }
 #slide11 .valign {
 	height:100vh;
@@ -490,7 +491,7 @@ p {
 	justify-content: space-between;
 }
 
-#column1, #column2, #column3{
+#column1, #column2{
 	display: flex;
 	flex-direction: column;
 }
