@@ -307,8 +307,13 @@ p {
 /************/
 /* SLIDE 04 */
 /************/
-#isFour {
-	background: url(../img/how_V3.svg) 75% 10%;
+#slide04 {
+	height: 100vh;
+	overflow: hidden;
+}
+#canvas4 {
+	position: relative;
+	left: -20%;
 }
 .transitionwords {
 	width: 500px;
@@ -362,8 +367,13 @@ p {
 /************/
 /* SLIDE 06 */
 /************/
-#isSix {
-	background: url(../img/what.svg) 85% 10%;
+#slide06 {
+	height: 100vh;
+	overflow: hidden;
+}
+#canvas5 {
+	position: relative;
+	left: -32%;
 }
 #slide06 .valign {
 	height:100vh;

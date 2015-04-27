@@ -19,6 +19,9 @@
 	<script src="http://code.createjs.com/movieclip-0.7.1.min.js"></script>
 	<script src="js/revenue.js"></script>
 	<script src="js/map.js"></script>
+	<script src="js/how.js"></script>
+	<script src="js/radiate.js"></script>
+	<script src="js/what.js"></script>
 	<script type="text/javascript" src="js/columnChart.js"></script>
 
 	<script>
@@ -50,6 +53,38 @@
 
 			createjs.Ticker.setFPS(lib.properties.fps);
 			createjs.Ticker.addEventListener("tick", stage2);
+		}
+	</script>
+
+	<script>
+		var canvas4, stage4, exportRoot4;
+
+		function init4() {
+			canvas4 = document.getElementById("canvas4");
+			exportRoot4 = new lib.how();
+
+			stage4 = new createjs.Stage(canvas4);
+			stage4.addChild(exportRoot4);
+			stage4.update();
+
+			createjs.Ticker.setFPS(lib.properties.fps);
+			createjs.Ticker.addEventListener("tick", stage4);
+		}
+	</script>
+
+	<script>
+		var canvas5, stage5, exportRoot5;
+
+		function init5() {
+			canvas5 = document.getElementById("canvas5");
+			exportRoot5 = new lib.what();
+
+			stage5 = new createjs.Stage(canvas5);
+			stage5.addChild(exportRoot5);
+			stage5.update();
+
+			createjs.Ticker.setFPS(lib.properties.fps);
+			createjs.Ticker.addEventListener("tick", stage5);
 		}
 	</script>
 
@@ -108,9 +143,9 @@
 		}
 
 		.axis path, .axis line {
-		  fill: none;
+		  /*fill: none;*/
 		  stroke: #ECEEE3;
-		  stroke-width: 5px;
+		  /*stroke-width: 5px;*/
 		  shape-rendering: crispEdges;
 		}
 
@@ -125,7 +160,6 @@
 			background-color: #ECEEE3;
 			pointer-events: none;
 			top: 60px;
-
 		}
 
 		#details p{
@@ -146,7 +180,7 @@
 
 </head>
 
-<body>
+<body onload="init4(); init5();">
 	<!-- SLIDE 01 -->
 	<div class="container global-width" id="isOne">
 		<div id="slide01">
@@ -373,15 +407,7 @@
 	<div class="container">
 		<div id="slide04">
 
-			<div id="slide04_1">
-				<div class="valign text-center">
-					<div>
-						<div class="global-width">
-							<h1 class="transitionwords">HOW DID WE GET HERE?</h1>
-						</div>
-					</div>
-				</div>			
-			</div>
+			<canvas id="canvas4" width="1920" height="1080"></canvas>
 
 			<!-- NAV -->
 			<img class="arrows arrows-up" id="arrow04_03" src="img/arrowup.png"/>
@@ -452,9 +478,9 @@
 			<div id="slide05_3">
 				<div class="valign text-center">
 					<div>
-						<div class="global-width">
-							<h2 style="color:black">But, that's only been recently.</h2>
-							<h2 style="color:black">Perhaps one of the biggest problems is that universities spend a lot of money to compete with each other.</h2>
+						<div class="global-width" style="background-color: rgba(0,0,0, .5); padding:8px;">
+							<h2>But, that's only been recently.</h2>
+							<h2>Perhaps one of the biggest problems is that universities spend a lot of money to compete with each other.</h2>
 							<p>see: <span class="tooltiplink tooltip" onmouseover="tooltip.pop(this, '#boweninfo',{position:0})">Bowen Effect<span></p>
 						</div>
 
@@ -569,15 +595,7 @@
 	<div class="container">
 		<div id="slide06">
 
-			<div id="slide06_1">
-				<div class="valign text-center">
-					<div>
-						<div class="global-width">
-							<h1 class="transitionwords">SO WHAT DO WE DO?</h1>
-						</div>
-					</div>
-				</div>			
-			</div>
+			<canvas id="canvas5" width="1920" height="1080"></canvas>
 
 			<!-- NAV -->
 			<img class="arrows arrows-up" id="arrow06_05" src="img/arrowup.png" onclick="init();"/>
