@@ -388,7 +388,7 @@ p.nominalBounds = new cjs.Rectangle(-1,-1,32.7,76.7);
 p.nominalBounds = new cjs.Rectangle(-16.3,-41.1,32.7,82.3);
 
 
-(lib.guy = function(mode,startPosition,loop) {
+(lib.happyGuy = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 2
@@ -564,8 +564,8 @@ p.nominalBounds = new cjs.Rectangle(-29.7,-60.5,130.2,321.3);
 	this.shape_9.setTransform(984.7,686.7);
 
 	// Layer 11
-	this.instance_22 = new lib.guy();
-	this.instance_22.setTransform(968.9,182.1,1,1,0,0,0,35.1,99.8);
+	this.happyGuy = new lib.happyGuy();
+	this.happyGuy.setTransform(968.9,182.1,1,1,0,0,0,35.1,99.8);
 
 	// Layer 9
 	this.shape_10 = new cjs.Shape();
@@ -584,7 +584,7 @@ p.nominalBounds = new cjs.Rectangle(-29.7,-60.5,130.2,321.3);
 	this.shape_13.graphics.f("#BDDDE6").s().p("EiV/ga3MEr0AAAMAAKAwqMkr+AFEg");
 	this.shape_13.setTransform(960,172);
 
-	this.addChild(this.shape_13,this.shape_12,this.shape_11,this.shape_10,this.instance_22,this.shape_9,this.shape_8,this.shape_7,this.shape_6,this.shape_5,this.shape_4,this.shape_3,this.shape_2,this.instance_21,this.instance_20,this.instance_19,this.instance_18,this.instance_17,this.instance_16,this.instance_15,this.instance_14,this.instance_13,this.instance_12,this.instance_11,this.instance_10,this.instance_9,this.instance_8,this.instance_7,this.instance_6,this.instance_5,this.instance_4,this.instance_3,this.instance_2,this.instance_1,this.instance,this.shape_1,this.shape);
+	this.addChild(this.shape_13,this.shape_12,this.shape_11,this.shape_10,this.happyGuy,this.shape_9,this.shape_8,this.shape_7,this.shape_6,this.shape_5,this.shape_4,this.shape_3,this.shape_2,this.instance_21,this.instance_20,this.instance_19,this.instance_18,this.instance_17,this.instance_16,this.instance_15,this.instance_14,this.instance_13,this.instance_12,this.instance_11,this.instance_10,this.instance_9,this.instance_8,this.instance_7,this.instance_6,this.instance_5,this.instance_4,this.instance_3,this.instance_2,this.instance_1,this.instance,this.shape_1,this.shape);
 }).prototype = p = new cjs.Container();
 p.nominalBounds = new cjs.Rectangle(952,540,1929,1080);
 
