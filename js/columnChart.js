@@ -96,6 +96,7 @@ function columnChart() {
     // zero line
      g.select(".x.axis.zero")
         .attr("transform", "translate(0," + Y0() + ")")
+        .attr("stroke-width", "5px")
         .call(xAxis.tickFormat("").tickSize(0));
     
     
