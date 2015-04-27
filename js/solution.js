@@ -372,7 +372,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,65.3,105.6);
 p.nominalBounds = new cjs.Rectangle(-1,-1,32.7,76.7);
 
 
-(lib.Tween8 = function() {
+(lib.guys_arm = function() {
 	this.initialize();
 
 	// Layer 1
@@ -392,7 +392,7 @@ p.nominalBounds = new cjs.Rectangle(-16.3,-41.1,32.7,82.3);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 2
-	this.instance = new lib.Tween8("synched",0);
+	this.instance = new lib.guys_arm("synched",0);
 	this.instance.setTransform(29.4,98.5,1,1,0,0,0,10.6,40.1);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).to({rotation:-5.5},14).to({rotation:0},15).to({rotation:5.2,x:29.3},20).to({rotation:0,x:29.4},17).to({regX:10.5,rotation:-6.4,x:29.3},18).to({regX:10.6,rotation:0,x:29.4},21).wait(1));
